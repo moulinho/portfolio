@@ -120,6 +120,11 @@ const Home = () => {
               </span>
             ))}
           </div>
+          <Image
+            className="rounded-full w-full h-64"
+            src={circleImage}
+            alt="Profile Picture"
+          />
         </div>
       </div>
       <Footer />
