@@ -1,11 +1,23 @@
 import React from "react";
+import Image from "next/image";
+import folder from "../../../public/folder.svg";
+import linkIcon from "../../../public/link.svg";
+
 type ProjectCardProps = {
   title: string;
   description: string;
   tools: string[];
+  icon: string;
 };
 const ProjectCard = ({ title, description, tools }: ProjectCardProps) => (
   <div className="bg-black text-white p-4 rounded-md shadow mb-4">
+    <div className="flex justify-between">
+      <Image src={folder} className="" alt="icon"  width={24}/>
+
+      <Image src={linkIcon} className="" alt="icon"  width={24} />
+
+      {/* <Image src= className="" alt="" /> */}
+    </div>
     <h3 className="text-lg font-bold">{title}</h3>
     <p className="text-sm mb-2">{description}</p>
     <div className="flex flex-wrap gap-2">
