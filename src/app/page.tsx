@@ -17,7 +17,7 @@ type SectionProps = {
 };
 
 const Section = ({ title, children }: SectionProps) => (
-  <section className="my-8">
+  <section className="my-8 text-base/7">
     <h2 className="text-2xl font-bold mb-4">{title}</h2>
     {children}
   </section>
@@ -26,11 +26,27 @@ const Section = ({ title, children }: SectionProps) => (
 const Home = () => {
   const experiences = [
     {
-      role: "Chef d'équipe Front-End",
+      role: (
+        <span className="font-semibold"> Chef d&apos;équipe Front-End</span>
+      ),
       company: "Legafrik",
       date: "Juillet 2023 - Present",
-      description:
-        "Coordination et développement des interfaces utilisateur de Legafrik.",
+      description: (
+        <div className="text-base/7">
+          <p className="">
+            En tant que chef d'équipe Front-End, chargé de la coordination et
+            l'orientation de l'équipe qui se concentre sur le développement des
+            interfaces utilisateur, des fonctionnalités et l'expérience
+            utilisateur globale.
+          </p>
+          <p>
+            Travaillez en étroite collaboration avec des équipes
+            interfonctionnelles, notamment des développeurs, des concepteurs et
+            des chefs de produit, pour mettre en œuvre et défendre les
+            meilleures pratiques en matière d'accessibilité Web.
+          </p>
+        </div>
+      ),
       skills: ["JavaScript", "React.js", "TypeScript", "HubSpot", "Laravel"],
     },
     {
@@ -77,14 +93,39 @@ const Home = () => {
 
   return (
     <div className="container mx-auto px-4">
-      <Header />
+      <div className="flex justify-center mb-24">
+        <Header />
+      </div>
       <div className="grid grid-cols-3">
         <div className="col-span-2">
           {/* About Section */}
           <Section title="A propos">
             <p>
               Je suis un développeur passionné par la création d&apos;interfaces
-              utilisateur accessibles et parfaites au pixel près.
+              utilisateur accessibles et parfaites au pixel près, qui associent
+              un design réfléchi à une ingénierie robuste. Mon travail préféré
+              se situe à l&apos;intersection de la conception et du
+              développement, créant des expériences qui non seulement sont
+              superbes, mais sont méticuleusement conçues pour la performance et
+              la convivialité.
+            </p>
+            <br />
+            <p>
+              Actuellement, je suis ingénieur front-end chez Legafrik,
+              spécialisé dans la numerisation de creation d&apos;entreprise. Je
+              contribue à la création et à la maintenance des composants
+              d&apos;interface utilisateur qui alimentent le front-end de
+              Legafrik, garantissant que notre plateforme répond aux normes
+              d&apos;accessibilité Web et aux meilleures pratiques pour offrir
+              une expérience utilisateur inclusive.
+            </p>
+            <br />
+            <p>
+              Par le passé, j&apos;ai eu l&apos;occasion de développer des
+              logiciels dans des environnements très divers, des agences de
+              construction de logement, entreprises specialisee dans la
+              techonologie agricole et entreprise de vente de logiciel sur
+              mesure.
             </p>
           </Section>
 
