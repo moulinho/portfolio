@@ -125,14 +125,14 @@ const Home = () => {
   ];
 
   const Icons = [
-    { icon: whatsapp, href: "https://github.com/pierre-lucas-gomez" },
+    { icon: whatsapp, href: "https://wa.me/+2250747313348?text=Comment pouvons-nous vous aider ?" },
     {
       icon: linkedin,
-      href: "https://www.linkedin.com/in/pierre-lucas-gomez-049a561b5/",
+      href: "https://www.linkedin.com/in/abdoulaye-sereme-6786441bb/",
     },
-    { icon: gmail, href: "mailto:pierre.lucas.gomez@gmail.com" },
+    { icon: gmail, href: "mailto:seremeabd@gmail.com" },
 
-    { icon: github1, href: "https://github.com/pierre-lucas-gomez" },
+    { icon: github1, href: "https://github.com/moulinho" },
   ];
 
   const projects = [
