@@ -199,6 +199,37 @@ const Home = () => {
       href: "https://www.legafrik.com/",
     },
     {
+      title: "MonBarra",
+      description: "Site d'offre d'emploi de vos rêves avec nous avec un design simples  et un parcour utilisateur fluide.",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="vueIcon"
+          src={vueIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="quasarIcon"
+          src={quasarIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="sassIcon"
+          src={sassIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: github,
+      // repos: "https://github.com/moulinho/Movie-Store-QuasarFramework",
+      href: "https://moulinho.github.io/",
+    },
+    {
       title: "Création de carte avec illustration",
       description:
         "Laissez libre cours à votre imagination et faites passer vos messages de manière inoubliable !",
@@ -233,7 +264,7 @@ const Home = () => {
 
     {
       title: "Shopping website",
-      description: "Une application web de vente de vetement et d’accessoir",
+      description: "Une application web de vente de vetement et d’accessoir.",
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -264,7 +295,7 @@ const Home = () => {
     },
     {
       title: "Movie store",
-      description: "Application de selection de films et de series",
+      description: "Application de selection de films et de series.",
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -296,7 +327,7 @@ const Home = () => {
     {
       title: "ZIUM",
       description:
-        "Une application web de vente de bijoux, vetement et de chapeau",
+        "Une application web de vente de bijoux, vetement et de chapeau.",
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -320,7 +351,7 @@ const Home = () => {
     },
     {
       title: "Stiky note",
-      description: "Application de prise de note",
+      description: "Application de prise de note.",
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -337,7 +368,7 @@ const Home = () => {
     },
     {
       title: "Particule animate",
-      description: "Application de particule animée",
+      description: "Application de particule animée.",
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -355,7 +386,7 @@ const Home = () => {
 
     {
       title: "Happy new year",
-      description: "Application de voeux de bonne année",
+      description: "Application de voeux de bonne année.",
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image

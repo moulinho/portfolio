@@ -4,14 +4,10 @@ import React from "react";
 
 type InformationSectionProps = {
   image: string;
-  Icons: { icon: string,href:string }[];
+  Icons: { icon: string; href: string }[];
 };
 
-const InformationSection = ({
-  image,
-  Icons,
-  
-}: InformationSectionProps) => {
+const InformationSection = ({ image, Icons }: InformationSectionProps) => {
   return (
     <div className="text-center lg:text-left ">
       <h1>
@@ -39,6 +35,28 @@ const InformationSection = ({
         src={image}
         alt="Profile Picture"
       />
+      {/* <div className="p-20 rounded-md w-1/2 bg-black">
+      
+      </div> */}
+      <div className="animate-bounce">
+        <div className=" h-24 w-24 bg-white  rounded-full animate-bounce"></div>
+        <div className=" h-24 w-24 bg-black  rounded-md  animate-bounce"></div>
+        <div className=" h-24 w-24 bg-black rotate-45 transform "></div>
+      </div>
+      {/* <div className="area " >
+            <ul className="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div > */}
     </div>
   );
 };

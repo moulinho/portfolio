@@ -54,7 +54,7 @@ export default function RootLayout({
         {children}
         <div className="fixed bottom-5 right-5 hidden scrollBtn z-50">
           <button
-            className="p-3 rounded-full bg-black hover:bg-gray-700 shadow-lg"
+            className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 shadow-lg"
             onClick={() =>
               window.scrollTo({
                 top: 0,
