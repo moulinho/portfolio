@@ -10,9 +10,22 @@ import file from "../../public/file.svg";
 import folder from "../../public/folder.svg";
 import linkedin from "../../public/linkedin.svg";
 import circleImage from "../../public/circleImage.svg";
+import jsIcon from "../../public/javascript.svg";
+import cssIcon from "../../public/css.svg";
+import sassIcon from "../../public/scss.svg";
+import bootstrapIcon from "../../public/Bootstrap.svg";
+import tailwindIcon from "../../public/tailwind.svg";
+import reactIcon from "../../public/react.svg";
+import reduxIcon from "../../public/redux.svg";
+import nextIcon from "../../public/next.svg";
+import nuxtIcon from "../../public/nuxt.svg";
+import vueIcon from "../../public/vue.svg";
+import quasarIcon from "../../public/quasar.svg";
+import piniaIcon from "../../public/Pinia.svg";
 import React, { ReactNode, useEffect } from "react";
 import ExperienceCard from "./components/ExperienceCard";
 import ProjectCard from "./components/ProjectCard";
+import Link from "next/link";
 
 type SectionProps = {
   title: string;
@@ -20,7 +33,7 @@ type SectionProps = {
 };
 
 const Section = ({ title, children }: SectionProps) => (
-  <section className="my-8 text-base/7">
+  <section className="my-5 text-base/7">
     <h2 className="text-2xl font-bold mb-4">{title}</h2>
     {children}
   </section>
@@ -32,7 +45,7 @@ const Home = () => {
       role: (
         <span className="font-semibold"> Chef d&apos;équipe Front-End</span>
       ),
-      company: "Legafrik",
+      company: <Link href="https://www.legafrik.com/">Legafrik</Link>,
       date: "Juillet 2023 - Present",
       description: (
         <div className="text-base/7">
@@ -54,7 +67,9 @@ const Home = () => {
     },
     {
       role: "Développeur front-end",
-      company: "Jool International",
+      company: (
+        <Link href="https://jool-international.com/">Jool International</Link>
+      ),
       date: "Août 2021 - Février 2023",
       description: (
         <div className="text-base/7">
@@ -73,6 +88,8 @@ const Home = () => {
         "Strapi",
         "Node.js",
         "Angular",
+        "Quasar Framework",
+        "Figma",
         "Adobe XD",
       ],
     },
@@ -99,7 +116,9 @@ const Home = () => {
     },
     {
       role: "Développeur front-end",
-      company: "WAGSystems",
+      company: (
+        <Link href="https://wagsystems.wixsite.com/wagsystems">WAGSystems</Link>
+      ),
       date: "Août 2020 -November 2020",
       description: (
         <div className="text-base/7">
@@ -113,12 +132,13 @@ const Home = () => {
   ];
 
   const Icons = [
-    { icon: whatsapp, href: "https://github.com/pierre-lucas-gomez" },{
+    { icon: whatsapp, href: "https://github.com/pierre-lucas-gomez" },
+    {
       icon: linkedin,
       href: "https://www.linkedin.com/in/pierre-lucas-gomez-049a561b5/",
     },
     { icon: gmail, href: "mailto:pierre.lucas.gomez@gmail.com" },
-    
+
     { icon: github1, href: "https://github.com/pierre-lucas-gomez" },
   ];
 
@@ -126,28 +146,240 @@ const Home = () => {
     {
       title: "Datagreff",
       description:
-        "Plateforme pour accéder et collecter des informations légales.",
-      tools: ["JS", "React"],
+        "Datagreffe est une plateforme qui vous permet d’accéder et de collecter toutes les informations légales, juridiques et financières sur les entreprises de votre choix.",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="reactIcon"
+          src={reactIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="reduxIocn"
+          src={reduxIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="tailwindIcon"
+          src={tailwindIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
       icon: folder,
-      href: "#",
+      href: "https://datagreffe.ci/",
     },
     {
       title: "Legafrik",
       description:
-        "Plateforme permettant de créer des documents légaux en ligne.",
-      tools: ["JS", "React"],
+        "Legafrik est une plateforme qui permet à chacun de créer son entreprise en générant des documents de création en formats PDF et Word à partir d’un formulaire.",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="reactIcon"
+          src={reactIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="reduxIocn"
+          src={reduxIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="tailwindIcon"
+          src={tailwindIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
       icon: file,
-      href: "#",
+      href: "https://www.legafrik.com/",
+    },
+    {
+      title: "Création de carte avec illustration",
+      description:
+        "Laissez libre cours à votre imagination et faites passer vos messages de manière inoubliable !",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="nextIcon"
+          src={nextIcon}
+          className=""
+          alt="icon"
+          width={35}
+        />,
+        <Image
+          key="cssIcon"
+          src={cssIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="tailwindIcon"
+          src={tailwindIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: file,
+      href: "https://carte-project.vercel.app/",
+    },
+
+    {
+      title: "Shopping website",
+      description: "Une application web de vente de vetement et d’accessoir",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="nuxtIcon"
+          src={nuxtIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="piniaIcon"
+          src={piniaIcon}
+          className=""
+          alt="icon"
+          width={20}
+        />,
+        <Image
+          key="bootstrapIcon"
+          src={bootstrapIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: file,
+      href: "https://shopping-website-nuxt3-i18n-pinia.vercel.app/",
+    },
+    {
+      title: "Movie store",
+      description: "Application de selection de films et de series",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="vueIcon"
+          src={vueIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="quasarIcon"
+          src={quasarIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="sassIcon"
+          src={sassIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: file,
+      href: "https://movie-store-quasar-framework.vercel.app/#/",
+    },
+    {
+      title: "ZIUM",
+      description:
+        "Une application web de vente de bijoux, vetement et de chapeau",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="nextIcon"
+          src={nextIcon}
+          className=""
+          alt="icon"
+          width={35}
+        />,
+        <Image
+          key="cssIcon"
+          src={cssIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: file,
+      href: "https://ziums.vercel.app/",
+    },
+    {
+      title: "Stiky note",
+      description: "Application de prise de note",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="cssIcon"
+          src={cssIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: file,
+      href: "https://sticky-notes-sage-xi.vercel.app/",
+    },
+    {
+      title: "Particule animate",
+      description: "Application de particule animée",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="cssIcon"
+          src={cssIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: file,
+      href: "https://sticky-notes-sage-xi.vercel.app/",
+    },
+
+    {
+      title: "Happy new year",
+      description: "Application de voeux de bonne année",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="cssIcon"
+          src={cssIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: file,
+      href: "https://fireworks-azure-pi.vercel.app/",
     },
   ];
 
   // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
+      const header = document.querySelector(".header");
       if (window.scrollY > 50) {
-        console.log("Scrolled more than 50px");
+        header?.classList.add("shadow-sm");
       } else {
-        console.log("Scrolled less than 50px");
+        header?.classList.remove("shadow-sm");
       }
     };
 
@@ -159,11 +391,42 @@ const Home = () => {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="header sticky top-0 z-50 mb-24 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+      <div className="header sticky top-0 z-50 mb-14 bg-orange-50 pb-5 pt-1">
         <Header />
       </div>
-      <div className="grid grid-cols-3">
-        <div className="col-span-2">
+      <div className="flex flex-col md:flex-row justify-evenly">
+        <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12 ">
+          <Section title="">
+            <div className="text-center lg:text-left">
+              <h1>
+                <span className="text-4xl font-bold">Sereme Abdoulaye</span>
+              </h1>
+              <h3 className="text-lg text-gray-600 mt-2">
+                Ingénieur Front End
+              </h3>
+              <p className="mt-4 text-gray-700">
+                Je crée des expériences numériques accessibles et parfaites pour
+                le Web et Mobile.
+              </p>
+              <div className="flex justify-center lg:justify-start items-center gap-4 mt-6">
+                {Icons.map((icon, index) => (
+                  <span
+                    key={index}
+                    className="bg-white p-3 rounded-full hover:shadow-lg transition-all"
+                  >
+                    <Image src={icon.icon} alt="icon" width={30} />
+                  </span>
+                ))}
+              </div>
+              <Image
+                className="rounded-full w-full h-64 mt-4"
+                src={circleImage}
+                alt="Profile Picture"
+              />
+            </div>
+          </Section>
+        </div>
+        <div className="md:w-7/12">
           {/* About Section */}
           <Section title="A propos">
             <p>
@@ -204,34 +467,12 @@ const Home = () => {
 
           {/* Projects Section */}
           <Section title="Projets">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
               {projects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}
             </div>
           </Section>
-        </div>
-        <div className="">
-          <h1>
-            <span className="text-3xl font-bold">Sereme Abdoulaye</span>
-          </h1>
-          <h3>Ingénieur Front End</h3>
-          <p>
-            Je crée des expériences numériques accessibles et parfaites pour le
-            Web et Mobile.
-          </p>
-          <div className="flex justify-evenly items-center gap-4">
-            {Icons.map((icon, index) => (
-              <span key={index} className="bg-white p-2 rounded-full">
-                <Image src={icon.icon} alt="icon" width={24}  />
-              </span>
-            ))}
-          </div>
-          <Image
-            className="rounded-full w-full h-64"
-            src={circleImage}
-            alt="Profile Picture"
-          />
         </div>
       </div>
       <Footer />
