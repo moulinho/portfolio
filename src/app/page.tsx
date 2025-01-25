@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import whatsapp from "../../public/whatsapp.svg";
 import github1 from "../../public/github1.svg";
+import github from "../../public/github.svg";
 import gmail from "../../public/gmail.svg";
 import file from "../../public/file.svg";
 import folder from "../../public/folder.svg";
@@ -233,7 +234,8 @@ const Home = () => {
           width={30}
         />,
       ],
-      icon: file,
+      icon: github,
+      repos:'https://github.com/moulinho/carte-project',
       href: "https://carte-project.vercel.app/",
     },
 
@@ -264,7 +266,8 @@ const Home = () => {
           width={30}
         />,
       ],
-      icon: file,
+      icon: github,
+      repos:'https://github.com/moulinho/shopping-website-Nuxt3-i18n-pinia',
       href: "https://shopping-website-nuxt3-i18n-pinia.vercel.app/",
     },
     {
@@ -294,7 +297,8 @@ const Home = () => {
           width={30}
         />,
       ],
-      icon: file,
+      icon: github,
+      repos:'https://github.com/moulinho/Movie-Store-QuasarFramework',
       href: "https://movie-store-quasar-framework.vercel.app/#/",
     },
     {
@@ -318,7 +322,8 @@ const Home = () => {
           width={30}
         />,
       ],
-      icon: file,
+      icon: github,
+      repos:'https://github.com/moulinho/Ziums',
       href: "https://ziums.vercel.app/",
     },
     {
@@ -334,7 +339,8 @@ const Home = () => {
           width={30}
         />,
       ],
-      icon: file,
+      icon: github,
+      repos:'https://github.com/moulinho/sticky-notes',
       href: "https://sticky-notes-sage-xi.vercel.app/",
     },
     {
@@ -350,7 +356,8 @@ const Home = () => {
           width={30}
         />,
       ],
-      icon: file,
+      icon: github,
+      repos:'https://github.com/moulinho/animation-canvas',
       href: "https://sticky-notes-sage-xi.vercel.app/",
     },
 
@@ -367,7 +374,8 @@ const Home = () => {
           width={30}
         />,
       ],
-      icon: file,
+      icon: github,
+      repos:'https://github.com/moulinho/fireworks',
       href: "https://fireworks-azure-pi.vercel.app/",
     },
   ];

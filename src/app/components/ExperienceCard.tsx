@@ -15,7 +15,7 @@ const ExperienceCard = ({
   description,
   skills,
 }: ExperienceCardProps) => (
-  <div className="bg-white p-4 rounded-md  mb-4">
+  <div className="bg-white p-4 rounded-md  mb-8">
     <div className="flex gap-4 items-center">
          <h3 className="text-xl font-semibold">{role}</h3>
     <span className="text-lg text-gray-700">
