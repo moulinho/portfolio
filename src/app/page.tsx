@@ -23,22 +23,14 @@ import nuxtIcon from "../../public/nuxt.svg";
 import vueIcon from "../../public/vue.svg";
 import quasarIcon from "../../public/quasar.svg";
 import piniaIcon from "../../public/Pinia.svg";
-import React, { ReactNode, useEffect } from "react";
+import React, {  useEffect } from "react";
 import ExperienceCard from "./components/ExperienceCard";
 import ProjectCard from "./components/ProjectCard";
 import Link from "next/link";
+import InformationSection from "./components/InformationSection";
+import Section from "./components/Section";
 
-type SectionProps = {
-  title: string;
-  children: ReactNode;
-};
 
-const Section = ({ title, children }: SectionProps) => (
-  <section className="my-5 text-base/7">
-    <h2 className="text-2xl font-bold mb-4">{title}</h2>
-    {children}
-  </section>
-);
 
 const Home = () => {
   const experiences = [
@@ -235,7 +227,7 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos:'https://github.com/moulinho/carte-project',
+      repos: "https://github.com/moulinho/carte-project",
       href: "https://carte-project.vercel.app/",
     },
 
@@ -267,7 +259,7 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos:'https://github.com/moulinho/shopping-website-Nuxt3-i18n-pinia',
+      repos: "https://github.com/moulinho/shopping-website-Nuxt3-i18n-pinia",
       href: "https://shopping-website-nuxt3-i18n-pinia.vercel.app/",
     },
     {
@@ -298,7 +290,7 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos:'https://github.com/moulinho/Movie-Store-QuasarFramework',
+      repos: "https://github.com/moulinho/Movie-Store-QuasarFramework",
       href: "https://movie-store-quasar-framework.vercel.app/#/",
     },
     {
@@ -323,7 +315,7 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos:'https://github.com/moulinho/Ziums',
+      repos: "https://github.com/moulinho/Ziums",
       href: "https://ziums.vercel.app/",
     },
     {
@@ -340,7 +332,7 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos:'https://github.com/moulinho/sticky-notes',
+      repos: "https://github.com/moulinho/sticky-notes",
       href: "https://sticky-notes-sage-xi.vercel.app/",
     },
     {
@@ -357,7 +349,7 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos:'https://github.com/moulinho/animation-canvas',
+      repos: "https://github.com/moulinho/animation-canvas",
       href: "https://sticky-notes-sage-xi.vercel.app/",
     },
 
@@ -375,26 +367,28 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos:'https://github.com/moulinho/fireworks',
+      repos: "https://github.com/moulinho/fireworks",
       href: "https://fireworks-azure-pi.vercel.app/",
     },
   ];
 
   // Handle scroll event
   useEffect(() => {
-    const handleScroll = () => {
-      const header = document.querySelector(".header");
-      if (window.scrollY > 50) {
-        header?.classList.add("shadow-sm");
-      } else {
-        header?.classList.remove("shadow-sm");
-      }
-    };
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 50) {
+          header?.classList.add("shadow-sm");
+        } else {
+          header?.classList.remove("shadow-sm");
+        }
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
@@ -405,39 +399,13 @@ const Home = () => {
       <div className="flex flex-col md:flex-row justify-evenly">
         <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12 ">
           <Section title="">
-            <div className="text-center lg:text-left">
-              <h1>
-                <span className="text-4xl font-bold">Sereme Abdoulaye</span>
-              </h1>
-              <h3 className="text-lg text-gray-600 mt-2">
-                Ingénieur Front End
-              </h3>
-              <p className="mt-4 text-gray-700">
-                Je crée des expériences numériques accessibles et parfaites pour
-                le Web et Mobile.
-              </p>
-              <div className="flex justify-center lg:justify-start items-center gap-4 mt-6">
-                {Icons.map((icon, index) => (
-                  <span
-                    key={index}
-                    className="bg-white p-3 rounded-full hover:shadow-lg transition-all"
-                  >
-                    <Image src={icon.icon} alt="icon" width={30} />
-                  </span>
-                ))}
-              </div>
-              <Image
-                className="rounded-full w-full h-64 mt-4"
-                src={circleImage}
-                alt="Profile Picture"
-              />
-            </div>
+            <InformationSection image={circleImage} Icons={Icons} />
           </Section>
         </div>
         <div className="md:w-7/12">
           {/* About Section */}
           <Section title="A propos">
-            <p>
+            <p id="about">
               Je suis un développeur passionné par la création d&apos;interfaces
               utilisateur accessibles et parfaites au pixel près, qui associent
               un design réfléchi à une ingénierie robuste. Mon travail préféré
@@ -468,14 +436,19 @@ const Home = () => {
 
           {/* Experiences Section */}
           <Section title="Expériences">
-            {experiences.map((exp, index) => (
-              <ExperienceCard key={index} {...exp} />
-            ))}
+            <span id="experiences">
+              {experiences.map((exp, index) => (
+                <ExperienceCard key={index} {...exp} />
+              ))}
+            </span>
           </Section>
 
           {/* Projects Section */}
           <Section title="Projets">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+              id="projects"
+            >
               {projects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}

@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Helvetica Neue"', "Arial", "sans-serif"], // Set default sans font
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -16,3 +19,4 @@ export default {
   },
   plugins: [],
 } satisfies Config;
+
