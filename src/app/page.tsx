@@ -393,69 +393,70 @@ const Home = () => {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="header sticky top-0 z-50 mb-14 bg-orange-50 pb-5 pt-1">
         <Header />
-      </div>
       <div className="flex flex-col md:flex-row justify-evenly">
-        <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12 ">
-          <Section title="">
-            <InformationSection image={circleImage} Icons={Icons} />
-          </Section>
-        </div>
-        <div className="md:w-7/12">
-          {/* About Section */}
-          <Section title="A propos">
-            <p id="about">
-              Je suis un développeur passionné par la création d&apos;interfaces
-              utilisateur accessibles et parfaites au pixel près, qui associent
-              un design réfléchi à une ingénierie robuste. Mon travail préféré
-              se situe à l&apos;intersection de la conception et du
-              développement, créant des expériences qui non seulement sont
-              superbes, mais sont méticuleusement conçues pour la performance et
-              la convivialité.
-            </p>
-            <br />
-            <p>
-              Actuellement, je suis ingénieur front-end chez Legafrik,
-              spécialisé dans la numerisation de creation d&apos;entreprise. Je
-              contribue à la création et à la maintenance des composants
-              d&apos;interface utilisateur qui alimentent le front-end de
-              Legafrik, garantissant que notre plateforme répond aux normes
-              d&apos;accessibilité Web et aux meilleures pratiques pour offrir
-              une expérience utilisateur inclusive.
-            </p>
-            <br />
-            <p>
-              Par le passé, j&apos;ai eu l&apos;occasion de développer des
-              logiciels dans des environnements très divers, des agences de
-              construction de logement, entreprises specialisee dans la
-              techonologie agricole et entreprise de vente de logiciel sur
-              mesure.
-            </p>
-          </Section>
+  <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12">
+    <div className="sticky top-20"> 
+      <Section title="">
+        <InformationSection image={circleImage} Icons={Icons} />
+      </Section>
+    </div>
+  </div>
+  <div className="md:w-7/12">
+    {/* About Section */}
+    <Section title="A propos">
+      <p id="about">
+        Je suis un développeur passionné par la création d&apos;interfaces
+        utilisateur accessibles et parfaites au pixel près, qui associent
+        un design réfléchi à une ingénierie robuste. Mon travail préféré
+        se situe à l&apos;intersection de la conception et du
+        développement, créant des expériences qui non seulement sont
+        superbes, mais sont méticuleusement conçues pour la performance et
+        la convivialité.
+      </p>
+      <br />
+      <p>
+        Actuellement, je suis ingénieur front-end chez Legafrik,
+        spécialisé dans la numerisation de creation d&apos;entreprise. Je
+        contribue à la création et à la maintenance des composants
+        d&apos;interface utilisateur qui alimentent le front-end de
+        Legafrik, garantissant que notre plateforme répond aux normes
+        d&apos;accessibilité Web et aux meilleures pratiques pour offrir
+        une expérience utilisateur inclusive.
+      </p>
+      <br />
+      <p>
+        Par le passé, j&apos;ai eu l&apos;occasion de développer des
+        logiciels dans des environnements très divers, des agences de
+        construction de logement, entreprises specialisee dans la
+        techonologie agricole et entreprise de vente de logiciel sur
+        mesure.
+      </p>
+    </Section>
 
-          {/* Experiences Section */}
-          <Section title="Expériences">
-            <span id="experiences">
-              {experiences.map((exp, index) => (
-                <ExperienceCard key={index} {...exp} />
-              ))}
-            </span>
-          </Section>
+    {/* Experiences Section */}
+    <Section title="Expériences">
+      <span id="experiences">
+        {experiences.map((exp, index) => (
+          <ExperienceCard key={index} {...exp} />
+        ))}
+      </span>
+    </Section>
 
-          {/* Projects Section */}
-          <Section title="Projets">
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
-              id="projects"
-            >
-              {projects.map((project, index) => (
-                <ProjectCard key={index} {...project} />
-              ))}
-            </div>
-          </Section>
-        </div>
+    {/* Projects Section */}
+    <Section title="Projets">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+        id="projects"
+      >
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
       </div>
+    </Section>
+  </div>
+</div>
+
       <Footer />
     </div>
   );
