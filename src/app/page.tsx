@@ -346,7 +346,7 @@ const Home = () => {
         />,
       ],
       icon: github,
-      repos: "https://github.com/moulinho/Ziums",
+      // repos: "https://github.com/moulinho/Ziums",
       href: "https://ziums.vercel.app/",
     },
     {
