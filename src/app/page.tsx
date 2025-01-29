@@ -381,7 +381,7 @@ const Home = () => {
       ],
       icon: github,
       repos: "https://github.com/moulinho/animation-canvas",
-      href: "https://sticky-notes-sage-xi.vercel.app/",
+      href: "https://animation-canvas.vercel.app/",
     },
 
     {
