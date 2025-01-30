@@ -23,14 +23,13 @@ import nuxtIcon from "../../public/nuxt.svg";
 import vueIcon from "../../public/vue.svg";
 import quasarIcon from "../../public/quasar.svg";
 import piniaIcon from "../../public/Pinia.svg";
-import React, {  useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ExperienceCard from "./components/ExperienceCard";
 import ProjectCard from "./components/ProjectCard";
 import Link from "next/link";
 import InformationSection from "./components/InformationSection";
 import Section from "./components/Section";
-
-
+import { Atom } from "react-loading-indicators";
 
 const Home = () => {
   const experiences = [
@@ -125,7 +124,10 @@ const Home = () => {
   ];
 
   const Icons = [
-    { icon: whatsapp, href: "https://wa.me/+2250747313348?text=Comment pouvons-nous vous aider ?" },
+    {
+      icon: whatsapp,
+      href: "https://wa.me/+2250747313348?text=Comment pouvons-nous vous aider ?",
+    },
     {
       icon: linkedin,
       href: "https://www.linkedin.com/in/abdoulaye-sereme-6786441bb/",
@@ -200,7 +202,8 @@ const Home = () => {
     },
     {
       title: "MonBarra",
-      description: "Site d'offre d'emploi de vos rêves avec nous avec un design simples  et un parcour utilisateur fluide.",
+      description:
+        "Site d'offre d'emploi de vos rêves avec nous avec un design simples  et un parcour utilisateur fluide.",
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -403,7 +406,7 @@ const Home = () => {
     },
   ];
 
-  // Handle scroll event
+  const [stateLoad, setstateLoad] = useState(true);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleScroll = () => {
@@ -422,74 +425,84 @@ const Home = () => {
     }
   }, []);
 
+  const loadingPage = () => {
+    return  <div className="flex items-center justify-center min-h-screen">
+   <Atom color="#000000" size="large" text="Loading..." speedPlus={-5} textColor="" />
+  </div>;
+  };
+
   return (
-    <div className="container mx-auto px-4">
+    <>
+    {stateLoad ? loadingPage():<div className="container mx-auto px-4">
         <Header />
-      <div className="flex flex-col md:flex-row justify-evenly">
-  <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12">
-    <div className="sticky top-20"> 
-      <Section title="">
-        <InformationSection image={circleImage} Icons={Icons} />
-      </Section>
-    </div>
-  </div>
-  <div className="md:w-7/12">
-    {/* About Section */}
-    <Section title="A propos">
-      <p id="about">
-        Je suis un développeur passionné par la création d&apos;interfaces
-        utilisateur accessibles et parfaites au pixel près, qui associent
-        un design réfléchi à une ingénierie robuste. Mon travail préféré
-        se situe à l&apos;intersection de la conception et du
-        développement, créant des expériences qui non seulement sont
-        superbes, mais sont méticuleusement conçues pour la performance et
-        la convivialité.
-      </p>
-      <br />
-      <p>
-        Actuellement, je suis ingénieur front-end chez Legafrik,
-        spécialisé dans la numerisation de creation d&apos;entreprise. Je
-        contribue à la création et à la maintenance des composants
-        d&apos;interface utilisateur qui alimentent le front-end de
-        Legafrik, garantissant que notre plateforme répond aux normes
-        d&apos;accessibilité Web et aux meilleures pratiques pour offrir
-        une expérience utilisateur inclusive.
-      </p>
-      <br />
-      <p>
-        Par le passé, j&apos;ai eu l&apos;occasion de développer des
-        logiciels dans des environnements très divers, des agences de
-        construction de logement, entreprises specialisee dans la
-        techonologie agricole et entreprise de vente de logiciel sur
-        mesure.
-      </p>
-    </Section>
+        <div className="flex flex-col md:flex-row justify-evenly">
+          <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12">
+            <div className="sticky top-20">
+              <Section title="">
+                <InformationSection image={circleImage} Icons={Icons} />
+              </Section>
+            </div>
+          </div>
+          <div className="md:w-7/12">
+            {/* About Section */}
+            <Section title="A propos">
+              <p id="about">
+                Je suis un développeur passionné par la création
+                d&apos;interfaces utilisateur accessibles et parfaites au pixel
+                près, qui associent un design réfléchi à une ingénierie robuste.
+                Mon travail préféré se situe à l&apos;intersection de la
+                conception et du développement, créant des expériences qui non
+                seulement sont superbes, mais sont méticuleusement conçues pour
+                la performance et la convivialité.
+              </p>
+              <br />
+              <p>
+                Actuellement, je suis ingénieur front-end chez Legafrik,
+                spécialisé dans la numerisation de creation d&apos;entreprise.
+                Je contribue à la création et à la maintenance des composants
+                d&apos;interface utilisateur qui alimentent le front-end de
+                Legafrik, garantissant que notre plateforme répond aux normes
+                d&apos;accessibilité Web et aux meilleures pratiques pour offrir
+                une expérience utilisateur inclusive.
+              </p>
+              <br />
+              <p>
+                Par le passé, j&apos;ai eu l&apos;occasion de développer des
+                logiciels dans des environnements très divers, des agences de
+                construction de logement, entreprises specialisee dans la
+                techonologie agricole et entreprise de vente de logiciel sur
+                mesure.
+              </p>
+            </Section>
 
-    {/* Experiences Section */}
-    <Section title="Expériences">
-      <span id="experiences">
-        {experiences.map((exp, index) => (
-          <ExperienceCard key={index} {...exp} />
-        ))}
-      </span>
-    </Section>
+            {/* Experiences Section */}
+            <Section title="Expériences">
+              <span id="experiences">
+                {experiences.map((exp, index) => (
+                  <ExperienceCard key={index} {...exp} />
+                ))}
+              </span>
+            </Section>
 
-    {/* Projects Section */}
-    <Section title="Projets">
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
-        id="projects"
-      >
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
+            {/* Projects Section */}
+            <Section title="Projets">
+              <div
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+                id="projects"
+              >
+                {projects.map((project, index) => (
+                  <ProjectCard key={index} {...project} />
+                ))}
+              </div>
+            </Section>
+          </div>
+        </div>
+
+        <Footer />
       </div>
-    </Section>
-  </div>
-</div>
-
-      <Footer />
-    </div>
+    }
+      
+    </>
   );
 };
 
