@@ -335,8 +335,24 @@ img, video {
   }
 }
 
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .sticky {
@@ -435,6 +451,14 @@ img, video {
   height: 16rem;
 }
 
+.h-\[350px\] {
+  height: 350px;
+}
+
+.h-\[340px\] {
+  height: 340px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -457,6 +481,10 @@ img, video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[340px\] {
+  width: 340px;
 }
 
 .rotate-45 {

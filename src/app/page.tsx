@@ -29,7 +29,8 @@ import ProjectCard from "./components/ProjectCard";
 import Link from "next/link";
 import InformationSection from "./components/InformationSection";
 import Section from "./components/Section";
-import { Atom } from "react-loading-indicators";
+// import { Atom } from "react-loading-indicators";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 
 const Home = () => {
   const experiences = [
@@ -407,6 +408,9 @@ const Home = () => {
   ];
 
   const [stateLoad, setstateLoad] = useState(true);
+  const count = useMotionValue(0);
+  const rounded = useTransform(() => Math.round(count.get()));
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleScroll = () => {
@@ -425,83 +429,168 @@ const Home = () => {
     }
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setstateLoad(false);
+    }, 4500);
+  }, [stateLoad]);
+
+  useEffect(() => {
+    const controls = animate(count, 100, { duration: 3 });
+    return () => controls.stop();
+  }, []);
   const loadingPage = () => {
-    return  <div className="flex items-center justify-center min-h-screen">
-   <Atom color="#000000" size="large" text="Loading..." speedPlus={-5} textColor="" />
-  </div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        {" "}
+        <motion.pre
+          style={{
+            fontSize: 64,
+            color: "#000000",
+          }}
+        >
+          {rounded}
+        </motion.pre>
+        {/* /  <Atom
+      //     color="#000000"
+      //     size="large"
+      //     text="Loading..."
+      //     speedPlus={-5}
+      //     textColor=""
+      //   /> */}
+      </div>
+      // <div style={{ position: "relative" }}>
+      //   <svg xmlns="http://www.w3.org/2000/svg" width="451" height="437">
+      //     <motion.path
+      //       d="M 239 17 C 142 17 48.5 103 48.5 213.5 C 48.5 324 126 408 244 408 C 362 408 412 319 412 213.5 C 412 108 334 68.5 244 68.5 C 154 68.5 102.68 135.079 99 213.5 C 95.32 291.921 157 350 231 345.5 C 305 341 357.5 290 357.5 219.5 C 357.5 149 314 121 244 121 C 174 121 151.5 167 151.5 213.5 C 151.5 260 176 286.5 224.5 286.5 C 273 286.5 296.5 253 296.5 218.5 C 296.5 184 270 177 244 177 C 218 177 197 198 197 218.5 C 197 239 206 250.5 225.5 250.5 C 245 250.5 253 242 253 218.5"
+      //       fill="transparent"
+      //       strokeWidth="12"
+      //       stroke="var(--hue-6-transparent)"
+      //       strokeLinecap="round"
+      //       initial={{ pathLength: 0.001 }}
+      //       animate={{ pathLength: 1 }}
+      //       transition={transition}
+      //     />
+      //   </svg>
+      //   <motion.div
+      //     style={{
+      //       width: 50,
+      //       height: 50,
+      //       backgroundColor: "#000000",
+      //       borderRadius: 10,
+      //       position: "absolute",
+      //       top: 0,
+      //       left: 0,
+      //       offsetPath: `path("M 239 17 C 142 17 48.5 103 48.5 213.5 C 48.5 324 126 408 244 408 C 362 408 412 319 412 213.5 C 412 108 334 68.5 244 68.5 C 154 68.5 102.68 135.079 99 213.5 C 95.32 291.921 157 350 231 345.5 C 305 341 357.5 290 357.5 219.5 C 357.5 149 314 121 244 121 C 174 121 151.5 167 151.5 213.5 C 151.5 260 176 286.5 224.5 286.5 C 273 286.5 296.5 253 296.5 218.5 C 296.5 184 270 177 244 177 C 218 177 197 198 197 218.5 C 197 239 206 250.5 225.5 250.5 C 245 250.5 253 242 253 218.5")`,
+      //     }}
+      //     initial={{ offsetDistance: "0%", scale: 2.5 }}
+      //     animate={{ offsetDistance: "100%", scale: 1 }}
+      //     transition={transition}
+      //   />
+      // </div>
+    );
   };
+  // const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" };
 
   return (
     <>
-    {stateLoad ? loadingPage():<div className="container mx-auto px-4">
-        <Header />
-        <div className="flex flex-col md:flex-row justify-evenly">
-          <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12">
-            <div className="sticky top-20">
-              <Section title="">
-                <InformationSection image={circleImage} Icons={Icons} />
-              </Section>
+      {stateLoad ? (
+        loadingPage()
+      ) : (
+        <motion.div
+          initial={{ opacity: 0, x: 50 }} // Start position: slightly below and invisible
+          animate={{ opacity: 1, x: 0 }} // End position: fully visible at normal position
+          transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+          className="container mx-auto px-4"
+        >
+          <Header />
+          <div className="flex flex-col md:flex-row justify-evenly">
+            <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12">
+              <div className="sticky top-20">
+                <Section title="">
+                  <InformationSection image={circleImage} Icons={Icons} />
+                </Section>
+              </div>
+            </div>
+            <div className="md:w-7/12">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }} // Start position: slightly below and invisible
+                animate={{ opacity: 1, y: 0 }} // End position: fully visible at normal position
+                transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+                className="container mx-auto px-4"
+              >
+                {/* About Section */}
+                <Section title="A propos">
+                  <p id="about">
+                    Je suis un développeur passionné par la création
+                    d&apos;interfaces utilisateur accessibles et parfaites au
+                    pixel près, qui associent un design réfléchi à une
+                    ingénierie robuste. Mon travail préféré se situe à
+                    l&apos;intersection de la conception et du développement,
+                    créant des expériences qui non seulement sont superbes, mais
+                    sont méticuleusement conçues pour la performance et la
+                    convivialité.
+                  </p>
+                  <br />
+                  <p>
+                    Actuellement, je suis ingénieur front-end chez Legafrik,
+                    spécialisé dans la numerisation de creation
+                    d&apos;entreprise. Je contribue à la création et à la
+                    maintenance des composants d&apos;interface utilisateur qui
+                    alimentent le front-end de Legafrik, garantissant que notre
+                    plateforme répond aux normes d&apos;accessibilité Web et aux
+                    meilleures pratiques pour offrir une expérience utilisateur
+                    inclusive.
+                  </p>
+                  <br />
+                  <p>
+                    Par le passé, j&apos;ai eu l&apos;occasion de développer des
+                    logiciels dans des environnements très divers, des agences
+                    de construction de logement, entreprises specialisee dans la
+                    techonologie agricole et entreprise de vente de logiciel sur
+                    mesure.
+                  </p>
+                </Section>
+
+                {/* Experiences Section */}
+                <Section title="Expériences">
+                  <span id="experiences">
+                    {experiences.map((exp, index) => (
+                      <ExperienceCard key={index} {...exp} />
+                    ))}
+                  </span>
+                </Section>
+
+                {/* Projects Section */}
+                <Section title="Projets">
+                  <div
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+                    id="projects"
+                  >
+                    {projects.map((project, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }} // Start hidden and below
+                        whileInView={{ opacity: 1, y: 0 }} // Animate when in view
+                        transition={{
+                          duration: 0.6,
+                          ease: "easeOut",
+                          delay: index * 0.2,
+                        }} // Delay each item
+                        viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% visible
+                      >
+                        <ProjectCard {...project} />
+                      </motion.div>
+                    ))}
+                  </div>
+                </Section>
+              </motion.div>
             </div>
           </div>
-          <div className="md:w-7/12">
-            {/* About Section */}
-            <Section title="A propos">
-              <p id="about">
-                Je suis un développeur passionné par la création
-                d&apos;interfaces utilisateur accessibles et parfaites au pixel
-                près, qui associent un design réfléchi à une ingénierie robuste.
-                Mon travail préféré se situe à l&apos;intersection de la
-                conception et du développement, créant des expériences qui non
-                seulement sont superbes, mais sont méticuleusement conçues pour
-                la performance et la convivialité.
-              </p>
-              <br />
-              <p>
-                Actuellement, je suis ingénieur front-end chez Legafrik,
-                spécialisé dans la numerisation de creation d&apos;entreprise.
-                Je contribue à la création et à la maintenance des composants
-                d&apos;interface utilisateur qui alimentent le front-end de
-                Legafrik, garantissant que notre plateforme répond aux normes
-                d&apos;accessibilité Web et aux meilleures pratiques pour offrir
-                une expérience utilisateur inclusive.
-              </p>
-              <br />
-              <p>
-                Par le passé, j&apos;ai eu l&apos;occasion de développer des
-                logiciels dans des environnements très divers, des agences de
-                construction de logement, entreprises specialisee dans la
-                techonologie agricole et entreprise de vente de logiciel sur
-                mesure.
-              </p>
-            </Section>
 
-            {/* Experiences Section */}
-            <Section title="Expériences">
-              <span id="experiences">
-                {experiences.map((exp, index) => (
-                  <ExperienceCard key={index} {...exp} />
-                ))}
-              </span>
-            </Section>
-
-            {/* Projects Section */}
-            <Section title="Projets">
-              <div
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
-                id="projects"
-              >
-                {projects.map((project, index) => (
-                  <ProjectCard key={index} {...project} />
-                ))}
-              </div>
-            </Section>
-          </div>
-        </div>
-
-        <Footer />
-      </div>
-    }
-      
+          <Footer />
+        </motion.div>
+      )}
     </>
   );
 };

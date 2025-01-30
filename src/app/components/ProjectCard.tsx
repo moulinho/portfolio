@@ -22,7 +22,7 @@ const ProjectCard = ({
   repos,
 }: ProjectCardProps) => (
   <div
-    className="bg-black text-white p-8 rounded-md flex flex-col justify-between gap-4 transform transition-transform duration-300 ease-out hover:scale-105"
+    className="w-[340px] h-[340px] bg-black text-white p-8 rounded-md flex flex-col justify-between gap-4 transform transition-transform duration-300 ease-out hover:scale-105"
  
   >
     <div className="flex justify-between">
