@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Section from "./Section";
+import Stacks from "./Stacks";
 
 type InformationSectionProps = {
   image: string;
   Icons: { icon: string; href: string }[];
 };
 
-const InformationSection = ({ image, Icons }: InformationSectionProps) => {
+const InformationSection = ({  Icons }: InformationSectionProps) => {
   return (
     <div className="text-center lg:text-left ">
       <h1>
@@ -30,11 +32,14 @@ const InformationSection = ({ image, Icons }: InformationSectionProps) => {
           </span>
         ))}
       </div>
-      <Image
+      <Section title="">
+        <Stacks />
+      </Section>
+      {/* <Image
         className="rounded-full w-full h-64 mt-4"
         src={image}
         alt="Profile Picture"
-      />
+      /> */}
       {/* <div className="p-20 rounded-md w-1/2 bg-black">
       
       </div> */}

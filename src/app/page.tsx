@@ -31,18 +31,36 @@ import InformationSection from "./components/InformationSection";
 import Section from "./components/Section";
 // import { Atom } from "react-loading-indicators";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import AboutSection from "./components/About";
 
 const Home = () => {
   const experiences = [
     {
-      role: (
-        <span className="font-semibold"> Chef d&apos;équipe Front-End</span>
-      ),
-      company: <Link href="https://www.legafrik.com/">Legafrik</Link>,
-      date: "Juillet 2023 - Present",
+      role: null,
+      company: null,
+      date: "",
+      location: "",
       description: (
         <div className="text-base/7">
-          <div className="">
+          <ol className="relative border-s border-gray-200 dark:border-gray-700">
+            <li className="mb-10 ms-4">
+            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+
+              <h3 className="text-lg font-semibold">
+                Chef d&apos;équipe Front-End{" "}
+                <Link href="https://www.legafrik.com/">
+                  <span className="text-blue-500 hover:underline">
+                    Legafrik
+                  </span>{" "}
+                  <br />
+                  <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-600">
+                    sept. 2024 - Present | Abidjan, Côte d’Ivoire
+                  </time>
+                </Link>
+              </h3>
+
+              <p className="mb-4 text-base font-normal ">
+              <div className="">
             En tant que chef d&apos;équipe Front-End, chargé de la coordination
             et l&apos;orientation de l&apos;équipe qui se concentre sur le
             développement des interfaces utilisateur, des fonctionnalités et
@@ -54,6 +72,34 @@ const Home = () => {
             des chefs de produit, pour mettre en œuvre et défendre les
             meilleures pratiques en matière d&apos;accessibilité Web.
           </div>
+              </p>
+            </li>
+            <li className="mb-10 ms-4">
+            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+
+              <h3 className="text-lg font-semibold">
+                Développeur FullStack{" "}
+                <Link href="https://www.legafrik.com/">
+                  <span className="text-blue-500 hover:underline">
+                    Legafrik
+                  </span>{" "}
+                  <br />
+                  <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-600">
+                    Juillet. 2023 - Sept. 2024 | Abidjan, Côte d’Ivoire
+                  </time>
+                </Link>
+              </h3>
+              <p className="text-base font-normal ">
+                Occupant le poste de développeur Full-Stack au sein d&apos;une équipe
+                dynamique et très travailleuse, mes tâches au quotidien
+                consistent à maintenir, optimiser et à intégrer des nouveaux
+                modules dans les application et site web de Legafrik en externes
+                et internes.
+              </p>
+            </li>
+          </ol>
+
+         
         </div>
       ),
       skills: ["JavaScript", "React.js", "TypeScript", "HubSpot", "Laravel"],
@@ -64,6 +110,7 @@ const Home = () => {
         <Link href="https://jool-international.com/">Jool International</Link>
       ),
       date: "Août 2021 - Février 2023",
+      location: "Abidjan, Côte d’Ivoire",
       description: (
         <div className="text-base/7">
           En tant que développeur Front End au sein d&apos;une équipe dynamique,
@@ -90,6 +137,8 @@ const Home = () => {
       role: "Développeur front-end",
       company: "WeFly Agri",
       date: "Mai 2021 - Août 2021",
+      location: "Abidjan, Côte d’Ivoire",
+
       description: (
         <div className="text-base/7">
           J&apos;interviens sur les projets existants en implémentant de
@@ -109,6 +158,8 @@ const Home = () => {
     },
     {
       role: "Développeur front-end",
+      location: "Abidjan, Côte d’Ivoire",
+
       company: (
         <Link href="https://wagsystems.wixsite.com/wagsystems">WAGSystems</Link>
       ),
@@ -442,7 +493,6 @@ const Home = () => {
   const loadingPage = () => {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        {" "}
         <motion.pre
           style={{
             fontSize: 64,
@@ -505,7 +555,7 @@ const Home = () => {
         >
           <Header />
           <div className="flex flex-col md:flex-row justify-evenly">
-            <div className="lg:w-3/12 mt-2 lg:mt-0 lg:pl-12">
+            <div className="lg:w-4/12 mt-2 lg:mt-0 lg:pl-12">
               <div className="sticky top-20">
                 <Section title="">
                   <InformationSection image={circleImage} Icons={Icons} />
@@ -521,35 +571,7 @@ const Home = () => {
               >
                 {/* About Section */}
                 <Section title="A propos">
-                  <p id="about">
-                    Je suis un développeur passionné par la création
-                    d&apos;interfaces utilisateur accessibles et parfaites au
-                    pixel près, qui associent un design réfléchi à une
-                    ingénierie robuste. Mon travail préféré se situe à
-                    l&apos;intersection de la conception et du développement,
-                    créant des expériences qui non seulement sont superbes, mais
-                    sont méticuleusement conçues pour la performance et la
-                    convivialité.
-                  </p>
-                  <br />
-                  <p>
-                    Actuellement, je suis ingénieur front-end chez Legafrik,
-                    spécialisé dans la numerisation de creation
-                    d&apos;entreprise. Je contribue à la création et à la
-                    maintenance des composants d&apos;interface utilisateur qui
-                    alimentent le front-end de Legafrik, garantissant que notre
-                    plateforme répond aux normes d&apos;accessibilité Web et aux
-                    meilleures pratiques pour offrir une expérience utilisateur
-                    inclusive.
-                  </p>
-                  <br />
-                  <p>
-                    Par le passé, j&apos;ai eu l&apos;occasion de développer des
-                    logiciels dans des environnements très divers, des agences
-                    de construction de logement, entreprises specialisee dans la
-                    techonologie agricole et entreprise de vente de logiciel sur
-                    mesure.
-                  </p>
+                  <AboutSection />
                 </Section>
 
                 {/* Experiences Section */}
