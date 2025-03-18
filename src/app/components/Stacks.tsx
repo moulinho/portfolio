@@ -21,7 +21,6 @@ const frontendStacks = [
   { name: "React", icon: reactIcon },
   { name: "Next.js", icon: nextIcon },
   { name: "Nuxt.js", icon: nuxtIcon },
-
   { name: "QUASAR", icon: quasarIcon },
   { name: "SASS", icon: sassIcon },
   { name: "Bootstrap", icon: bootstrapIcon },
