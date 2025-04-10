@@ -13,10 +13,12 @@ import nodeIcon from "../../../public/node.svg";
 import expressIcon from "../../../public/express.svg";
 import mongoIcon from "../../../public/mongodb.svg";
 import mysqlIcon from "../../../public/mysql.svg";
+import typescript from "../../../public/typescript.svg";
 import Image from "next/image";
 
 const frontendStacks = [
   { name: "JavaScript", icon: jsIcon },
+  { name: "TypeScript", icon: typescript },
   { name: "Vue.js", icon: vueIcon },
   { name: "React", icon: reactIcon },
   { name: "Next.js", icon: nextIcon },

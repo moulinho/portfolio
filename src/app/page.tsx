@@ -32,6 +32,7 @@ import Section from "./components/Section";
 // import { Atom } from "react-loading-indicators";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import AboutSection from "./components/About";
+import Waves from "react-animated-waves";
 
 const Home = () => {
   const experiences = [
@@ -44,14 +45,15 @@ const Home = () => {
         <div className="text-base/7">
           <ol className="relative border-s border-gray-200 dark:border-gray-700">
             <li className="mb-10 ms-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
               <h3 className="text-lg font-semibold">
                 Chef d&apos;équipe Front-End{" "}
                 <Link href="https://www.legafrik.com/">
                   <span className="text-blue-500 hover:underline">
                     Legafrik
-                  </span>{" "}.   
+                  </span>{" "}
+                  .
                   <br />
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-600">
                     sept. 2024 - Mars 2025 | Abidjan, Côte d’Ivoire
@@ -60,22 +62,23 @@ const Home = () => {
               </h3>
 
               <p className="mb-4 text-base font-normal ">
-              <div className="">
-            En tant que chef d&apos;équipe Front-End, chargé de la coordination
-            et l&apos;orientation de l&apos;équipe qui se concentre sur le
-            développement des interfaces utilisateur, des fonctionnalités et
-            l&apos;expérience utilisateur globale.
-          </div>
-          <div>
-            Travaillez en étroite collaboration avec des équipes
-            interfonctionnelles, notamment des développeurs, des concepteurs et
-            des chefs de produit, pour mettre en œuvre et défendre les
-            meilleures pratiques en matière d&apos;accessibilité Web.
-          </div>
+                <div className="">
+                  En tant que chef d&apos;équipe Front-End, chargé de la
+                  coordination et l&apos;orientation de l&apos;équipe qui se
+                  concentre sur le développement des interfaces utilisateur, des
+                  fonctionnalités et l&apos;expérience utilisateur globale.
+                </div>
+                <div>
+                  Travaillez en étroite collaboration avec des équipes
+                  interfonctionnelles, notamment des développeurs, des
+                  concepteurs et des chefs de produit, pour mettre en œuvre et
+                  défendre les meilleures pratiques en matière
+                  d&apos;accessibilité Web.
+                </div>
               </p>
             </li>
             <li className="mb-10 ms-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
               <h3 className="text-lg font-semibold">
                 Développeur FullStack{" "}
@@ -90,16 +93,14 @@ const Home = () => {
                 </Link>
               </h3>
               <p className="text-base font-normal ">
-                Occupant le poste de développeur Full-Stack au sein d&apos;une équipe
-                dynamique et très travailleuse, mes tâches au quotidien
+                Occupant le poste de développeur Full-Stack au sein d&apos;une
+                équipe dynamique et très travailleuse, mes tâches au quotidien
                 consistent à maintenir, optimiser et à intégrer des nouveaux
                 modules dans les application et site web de Legafrik en externes
                 et internes.
               </p>
             </li>
           </ol>
-
-         
         </div>
       ),
       skills: ["JavaScript", "React.js", "TypeScript", "HubSpot", "Laravel"],
@@ -190,6 +191,38 @@ const Home = () => {
   ];
 
   const projects = [
+    {
+      title: "Moide-ferme",
+      description:
+        "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="reactIcon"
+          src={reactIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="reduxIocn"
+          src={reduxIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="tailwindIcon"
+          src={tailwindIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: folder,
+      href: "https://school-project-react-tailwind.vercel.app/",
+    },
+
     {
       title: "Datagreff",
       description:
@@ -492,7 +525,7 @@ const Home = () => {
   }, []);
   const loadingPage = () => {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex flex-col text-center items-center justify-center min-h-screen">
         <motion.pre
           style={{
             fontSize: 64,
@@ -501,46 +534,10 @@ const Home = () => {
         >
           {rounded}
         </motion.pre>
-        {/* /  <Atom
-      //     color="#000000"
-      //     size="large"
-      //     text="Loading..."
-      //     speedPlus={-5}
-      //     textColor=""
-      //   /> */}
+        <Waves amplitude={50} colors={["#FF6AC6", "#436EDB", "#FF6AC6"]} />
       </div>
-      // <div style={{ position: "relative" }}>
-      //   <svg xmlns="http://www.w3.org/2000/svg" width="451" height="437">
-      //     <motion.path
-      //       d="M 239 17 C 142 17 48.5 103 48.5 213.5 C 48.5 324 126 408 244 408 C 362 408 412 319 412 213.5 C 412 108 334 68.5 244 68.5 C 154 68.5 102.68 135.079 99 213.5 C 95.32 291.921 157 350 231 345.5 C 305 341 357.5 290 357.5 219.5 C 357.5 149 314 121 244 121 C 174 121 151.5 167 151.5 213.5 C 151.5 260 176 286.5 224.5 286.5 C 273 286.5 296.5 253 296.5 218.5 C 296.5 184 270 177 244 177 C 218 177 197 198 197 218.5 C 197 239 206 250.5 225.5 250.5 C 245 250.5 253 242 253 218.5"
-      //       fill="transparent"
-      //       strokeWidth="12"
-      //       stroke="var(--hue-6-transparent)"
-      //       strokeLinecap="round"
-      //       initial={{ pathLength: 0.001 }}
-      //       animate={{ pathLength: 1 }}
-      //       transition={transition}
-      //     />
-      //   </svg>
-      //   <motion.div
-      //     style={{
-      //       width: 50,
-      //       height: 50,
-      //       backgroundColor: "#000000",
-      //       borderRadius: 10,
-      //       position: "absolute",
-      //       top: 0,
-      //       left: 0,
-      //       offsetPath: `path("M 239 17 C 142 17 48.5 103 48.5 213.5 C 48.5 324 126 408 244 408 C 362 408 412 319 412 213.5 C 412 108 334 68.5 244 68.5 C 154 68.5 102.68 135.079 99 213.5 C 95.32 291.921 157 350 231 345.5 C 305 341 357.5 290 357.5 219.5 C 357.5 149 314 121 244 121 C 174 121 151.5 167 151.5 213.5 C 151.5 260 176 286.5 224.5 286.5 C 273 286.5 296.5 253 296.5 218.5 C 296.5 184 270 177 244 177 C 218 177 197 198 197 218.5 C 197 239 206 250.5 225.5 250.5 C 245 250.5 253 242 253 218.5")`,
-      //     }}
-      //     initial={{ offsetDistance: "0%", scale: 2.5 }}
-      //     animate={{ offsetDistance: "100%", scale: 1 }}
-      //     transition={transition}
-      //   />
-      // </div>
     );
   };
-  // const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" };
 
   return (
     <>
@@ -548,9 +545,9 @@ const Home = () => {
         loadingPage()
       ) : (
         <motion.div
-          initial={{ opacity: 0, x: 50 }} // Start position: slightly below and invisible
-          animate={{ opacity: 1, x: 0 }} // End position: fully visible at normal position
-          transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="container mx-auto px-4"
         >
           <Header />
@@ -564,19 +561,19 @@ const Home = () => {
             </div>
             <div className="md:w-7/12">
               <motion.div
-                initial={{ opacity: 0, y: 50 }} // Start position: slightly below and invisible
-                animate={{ opacity: 1, y: 0 }} // End position: fully visible at normal position
-                transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
                 className="container mx-auto px-4"
               >
                 {/* About Section */}
-                <Section title="A propos">
+                <Section title="A propos" id="A propos">
                   <AboutSection />
                 </Section>
 
                 {/* Experiences Section */}
-                <Section title="Expériences">
-                  <span id="experiences">
+                <Section title="Expériences" id="experiences">
+                  <span>
                     {experiences.map((exp, index) => (
                       <ExperienceCard key={index} {...exp} />
                     ))}
@@ -584,7 +581,7 @@ const Home = () => {
                 </Section>
 
                 {/* Projects Section */}
-                <Section title="Projets">
+                <Section title="Projets" id="Projets">
                   <div
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
                     id="projects"
@@ -592,14 +589,14 @@ const Home = () => {
                     {projects.map((project, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 50 }} // Start hidden and below
-                        whileInView={{ opacity: 1, y: 0 }} // Animate when in view
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{
                           duration: 0.6,
                           ease: "easeOut",
                           delay: index * 0.2,
                         }} // Delay each item
-                        viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% visible
+                        viewport={{ once: true, amount: 0.2 }}
                       >
                         <ProjectCard {...project} />
                       </motion.div>
