@@ -220,7 +220,7 @@ const Home = () => {
         />,
       ],
       icon: folder,
-      href: "https://school-project-react-tailwind.vercel.app/",
+      href: "https://moide-ferme.ci/",
     },
 
     {
