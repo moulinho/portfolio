@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
-import QrCodeWithLogo from 'qrcode-with-logos'
+// import React, { useEffect } from "react";
+// import QrCodeWithLogo from 'qrcode-with-logos'
 
 import Section from "./Section";
 import Stacks from "./Stacks";
@@ -13,21 +13,20 @@ type InformationSectionProps = {
 
 const InformationSection = ({  Icons }: InformationSectionProps) => {
 
-  useEffect(() => {
-    const imageElement = document.getElementById("image") as HTMLImageElement | null;
+  // useEffect(() => {
+  //   const imageElement = document.getElementById("image") as HTMLImageElement | null;
 
-    if (imageElement) {
-      new QrCodeWithLogo({
-        content: "https://github.com/moulinho",
-        width: 250,
-        image: imageElement,
-        logo: {
-          src: 'https://portfolio-swart-xi-73.vercel.app/sereme.png',
-          
-        },
-      });
-    }
-  }, []); 
+  //   if (imageElement) {
+  //     new QrCodeWithLogo({
+  //       content: "https://github.com/moulinho",
+  //       width: 200,
+  //       image: imageElement,
+  //       logo: {
+  //         src: 'https://portfolio-swart-xi-73.vercel.app/sereme.png',
+  //       },
+  //     });
+  //   }
+  // }, []); 
 
 
   return (
@@ -63,7 +62,7 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
       {/* <div className="p-20 rounded-md w-1/2 bg-black">
       
       </div> */}
-      <div className="flex justify-between  lg:justify-start  gap-4 mt-6">
+      {/* <div className="flex justify-between  lg:justify-start  gap-4 mt-6"> */}
        
       <div className="animate-bounce">
         <div className=" h-24 w-24 bg-white  rounded-full animate-bounce"></div>
@@ -71,8 +70,8 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
         <div className=" h-24 w-24 bg-black rotate-45 transform "></div>
       </div>
 
-      <Image src={''} id="image" alt="" />
-        </div>
+      {/* <Image src={''} id="image" alt="" /> */}
+        {/* </div> */}
       {/* <div className="area " >
             <ul className="circles">
                     <li></li>

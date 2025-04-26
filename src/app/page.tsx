@@ -551,6 +551,7 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="container mx-auto px-4"
         >
+          
           <Header />
           <div className="flex flex-col md:flex-row justify-evenly">
             <div className="lg:w-4/12 mt-2 lg:mt-0 lg:pl-12">
