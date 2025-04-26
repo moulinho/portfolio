@@ -15,7 +15,7 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
       <h1>
         <span className="text-4xl font-bold">Sereme Abdoulaye</span>
       </h1>
-      <h3 className="text-lg text-gray-600 mt-2">Ingénieur logiciel</h3>
+      <h3 className="text-xl text-gray-600 font-semibold mt-2">Ingénieur logiciel</h3>
       <p className="mt-4 text-gray-700">
         Je crée des expériences numériques accessibles et parfaites pour le Web
         et Mobile.
@@ -43,11 +43,14 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
       {/* <div className="p-20 rounded-md w-1/2 bg-black">
       
       </div> */}
+      <div className="flex justify-center lg:justify-start items-center gap-4 mt-6">
+       
       <div className="animate-bounce">
         <div className=" h-24 w-24 bg-white  rounded-full animate-bounce"></div>
         <div className=" h-24 w-24 bg-black  rounded-md  animate-bounce"></div>
         <div className=" h-24 w-24 bg-black rotate-45 transform "></div>
       </div>
+        </div>
       {/* <div className="area " >
             <ul className="circles">
                     <li></li>

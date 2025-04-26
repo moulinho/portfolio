@@ -318,6 +318,31 @@ const Home = () => {
       href: "https://moulinho.github.io/",
     },
     {
+      title: "ZIUM",
+      description:
+        "Une application web de vente de bijoux, vetement et de chapeau.",
+      tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="nextIcon"
+          src={nextIcon}
+          className=""
+          alt="icon"
+          width={35}
+        />,
+        <Image
+          key="cssIcon"
+          src={cssIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: github,
+      // repos: "https://github.com/moulinho/Ziums",
+      href: "https://ziums.vercel.app/",
+    },
+    {
       title: "Création de carte avec illustration",
       description:
         "Laissez libre cours à votre imagination et faites passer vos messages de manière inoubliable !",
@@ -412,31 +437,7 @@ const Home = () => {
       repos: "https://github.com/moulinho/Movie-Store-QuasarFramework",
       href: "https://movie-store-quasar-framework.vercel.app/#/",
     },
-    {
-      title: "ZIUM",
-      description:
-        "Une application web de vente de bijoux, vetement et de chapeau.",
-      tools: [
-        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
-        <Image
-          key="nextIcon"
-          src={nextIcon}
-          className=""
-          alt="icon"
-          width={35}
-        />,
-        <Image
-          key="cssIcon"
-          src={cssIcon}
-          className=""
-          alt="icon"
-          width={30}
-        />,
-      ],
-      icon: github,
-      // repos: "https://github.com/moulinho/Ziums",
-      href: "https://ziums.vercel.app/",
-    },
+
     {
       title: "Stiky note",
       description: "Application de prise de note.",

@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <>
-      <p id="about">
+    <div id="about">
+      <p >
         Je suis un développeur passionné par la création d&apos;interfaces
         utilisateur accessibles et parfaites au pixel près, qui associent un
         design réfléchi à une ingénierie robuste. Mon travail préféré se situe à
@@ -27,7 +27,7 @@ const AboutSection = () => {
         logement, entreprises specialisee dans la techonologie agricole et
         entreprise de vente de logiciel sur mesure.
       </p>
-    </>
+    </div>
   );
 };
 
