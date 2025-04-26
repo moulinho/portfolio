@@ -6,7 +6,7 @@
   "path": "static/chunks/src_app_page_tsx_78d390._.js",
   "chunks": [
     "static/chunks/_1e5026._.js",
-    "static/chunks/node_modules_4826e2._.js"
+    "static/chunks/node_modules_195162._.js"
   ],
   "source": "dynamic"
 });
