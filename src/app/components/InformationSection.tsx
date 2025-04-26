@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import QrCodeWithLogo from 'qrcode-with-logos'
 
 import Section from "./Section";
@@ -13,17 +13,23 @@ type InformationSectionProps = {
 
 const InformationSection = ({  Icons }: InformationSectionProps) => {
 
-  new QrCodeWithLogo({
-    // canvas: document.getElementById("canvas"),
-    content: 'https://github.com/zxpsuper',
-    width: 380,
-    //   download: true,
-    image: document.getElementById('image') as HTMLImageElement | undefined,
-    logo: {
-      src: '../../../public/qr-code.png'
+  useEffect(() => {
+    const imageElement = document.getElementById("image") as HTMLImageElement | null;
+
+    if (imageElement) {
+      new QrCodeWithLogo({
+        content: "https://github.com/moulinho",
+        width: 250,
+        image: imageElement,
+        logo: {
+          src: 'https://portfolio-swart-xi-73.vercel.app/sereme.png',
+          
+        },
+      });
     }
-  })
-  
+  }, []); 
+
+
   return (
     <div className="text-center lg:text-left ">
       <h1>
@@ -57,7 +63,7 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
       {/* <div className="p-20 rounded-md w-1/2 bg-black">
       
       </div> */}
-      <div className="flex justify-between lg:justify-start items-center gap-4 mt-6">
+      <div className="flex justify-between  lg:justify-start  gap-4 mt-6">
        
       <div className="animate-bounce">
         <div className=" h-24 w-24 bg-white  rounded-full animate-bounce"></div>

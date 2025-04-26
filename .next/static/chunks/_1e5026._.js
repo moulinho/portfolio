@@ -1360,9 +1360,12 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$qrcode$2d$with$2d$logos$2f$lib$2f$qrcode$2d$with$2d$logos$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/qrcode-with-logos/lib/qrcode-with-logos.esm.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Section$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/components/Section.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Stacks$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/components/Stacks.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
@@ -1370,16 +1373,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$
 ;
 ;
 const InformationSection = ({ Icons })=>{
-    new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$qrcode$2d$with$2d$logos$2f$lib$2f$qrcode$2d$with$2d$logos$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]({
-        // canvas: document.getElementById("canvas"),
-        content: 'https://github.com/zxpsuper',
-        width: 380,
-        //   download: true,
-        image: document.getElementById('image'),
-        logo: {
-            src: '../../../public/qr-code.png'
+    _s();
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "InformationSection.useEffect": ()=>{
+            const imageElement = document.getElementById("image");
+            if (imageElement) {
+                new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$qrcode$2d$with$2d$logos$2f$lib$2f$qrcode$2d$with$2d$logos$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]({
+                    content: "https://github.com/moulinho",
+                    width: 250,
+                    image: imageElement,
+                    logo: {
+                        src: 'https://portfolio-swart-xi-73.vercel.app/sereme.png'
+                    }
+                });
+            }
         }
-    });
+    }["InformationSection.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "text-center lg:text-left ",
         children: [
@@ -1389,12 +1398,12 @@ const InformationSection = ({ Icons })=>{
                     children: "Sereme Abdoulaye"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/InformationSection.tsx",
-                    lineNumber: 30,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                lineNumber: 29,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1402,7 +1411,7 @@ const InformationSection = ({ Icons })=>{
                 children: "Ingénieur logiciel"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                lineNumber: 32,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1410,7 +1419,7 @@ const InformationSection = ({ Icons })=>{
                 children: "Je crée des expériences numériques accessibles et parfaites pour le Web et Mobile."
             }, void 0, false, {
                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                lineNumber: 33,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1426,38 +1435,38 @@ const InformationSection = ({ Icons })=>{
                                 width: 30
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                                lineNumber: 44,
+                                lineNumber: 50,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/InformationSection.tsx",
-                            lineNumber: 43,
+                            lineNumber: 49,
                             columnNumber: 13
                         }, this)
                     }, index, false, {
                         fileName: "[project]/src/app/components/InformationSection.tsx",
-                        lineNumber: 39,
+                        lineNumber: 45,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                lineNumber: 37,
+                lineNumber: 43,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Section$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 title: "",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Stacks$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/components/InformationSection.tsx",
-                    lineNumber: 50,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                lineNumber: 49,
+                lineNumber: 55,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-between lg:justify-start items-center gap-4 mt-6",
+                className: "flex justify-between  lg:justify-start  gap-4 mt-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "animate-bounce",
@@ -1466,27 +1475,27 @@ const InformationSection = ({ Icons })=>{
                                 className: " h-24 w-24 bg-white  rounded-full animate-bounce"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                                lineNumber: 63,
+                                lineNumber: 69,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: " h-24 w-24 bg-black  rounded-md  animate-bounce"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                                lineNumber: 64,
+                                lineNumber: 70,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: " h-24 w-24 bg-black rotate-45 transform "
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                                lineNumber: 65,
+                                lineNumber: 71,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/InformationSection.tsx",
-                        lineNumber: 62,
+                        lineNumber: 68,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1495,22 +1504,23 @@ const InformationSection = ({ Icons })=>{
                         alt: ""
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/InformationSection.tsx",
-                        lineNumber: 68,
+                        lineNumber: 74,
                         columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/InformationSection.tsx",
-                lineNumber: 60,
+                lineNumber: 66,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/InformationSection.tsx",
-        lineNumber: 28,
+        lineNumber: 34,
         columnNumber: 5
     }, this);
 };
+_s(InformationSection, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = InformationSection;
 const __TURBOPACK__default__export__ = InformationSection;
 var _c;
