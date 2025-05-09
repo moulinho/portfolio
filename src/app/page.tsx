@@ -191,37 +191,37 @@ const Home = () => {
   ];
 
   const projects = [
-    {
-      title: "Moide-ferme",
-      description:
-        "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
-      tools: [
-        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
-        <Image
-          key="reactIcon"
-          src={reactIcon}
-          className=""
-          alt="icon"
-          width={30}
-        />,
-        <Image
-          key="reduxIocn"
-          src={reduxIcon}
-          className=""
-          alt="icon"
-          width={30}
-        />,
-        <Image
-          key="tailwindIcon"
-          src={tailwindIcon}
-          className=""
-          alt="icon"
-          width={30}
-        />,
-      ],
-      icon: folder,
-      href: "https://moide-ferme.ci/",
-    },
+    // {
+    //   title: "Moide-ferme",
+    //   description:
+    //     "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
+    //   tools: [
+    //     <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+    //     <Image
+    //       key="reactIcon"
+    //       src={reactIcon}
+    //       className=""
+    //       alt="icon"
+    //       width={30}
+    //     />,
+    //     <Image
+    //       key="reduxIocn"
+    //       src={reduxIcon}
+    //       className=""
+    //       alt="icon"
+    //       width={30}
+    //     />,
+    //     <Image
+    //       key="tailwindIcon"
+    //       src={tailwindIcon}
+    //       className=""
+    //       alt="icon"
+    //       width={30}
+    //     />,
+    //   ],
+    //   icon: folder,
+    //   href: "https://moide-ferme.ci/",
+    // },
 
     {
       title: "Datagreff",
