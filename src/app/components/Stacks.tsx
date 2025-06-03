@@ -7,6 +7,7 @@ import bootstrapIcon from "../../../public/Bootstrap.svg";
 import tailwindIcon from "../../../public/tailwind.svg";
 import nuxtIcon from "../../../public/nuxt.svg";
 import quasarIcon from "../../../public/quasar.svg";
+import angular from "../../../public/angularLogo.png"
 
 import nextIcon from "../../../public/nextjs.svg";
 import nodeIcon from "../../../public/node.svg";
@@ -27,6 +28,7 @@ const frontendStacks = [
   { name: "SASS", icon: sassIcon },
   { name: "Bootstrap", icon: bootstrapIcon },
   { name: "Tailwind CSS", icon: tailwindIcon },
+  { name: "Angular", icon: angular },
 ];
 
 const backendStacks = [
