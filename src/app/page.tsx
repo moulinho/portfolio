@@ -225,7 +225,7 @@ const Home = () => {
     // },
 
     {
-      title: "Biflaz",
+      title: "Mobile Biflaz",
       description:"Biflaz est une application de covoiturage pratique et abordable qui vous met en relation avec un conducteur à proximité en quelques minutes, à tout moment et en tout lieu.",
       tools: [
         <Image key="vueIcon" src={vueIcon} className="" alt="icon" width={30} />,
@@ -256,7 +256,7 @@ const Home = () => {
     },
 
      {
-      title: "monbarra",
+      title: "Mobile monbarra",
       description:"Nous vous proposons des offres d'emploi provenant du monde entier.",
       tools: [
         <Image key="vueIcon" src={vueIcon} className="" alt="icon" width={30} />,
