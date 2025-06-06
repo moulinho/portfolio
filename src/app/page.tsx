@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import whatsapp from "../../public/whatsapp.svg";
+import capacitor from "../../public/capacitor.png";
 import github1 from "../../public/github1.svg";
 import github from "../../public/github.svg";
 import gmail from "../../public/gmail.svg";
@@ -222,6 +223,68 @@ const Home = () => {
     //   icon: folder,
     //   href: "https://moide-ferme.ci/",
     // },
+
+    {
+      title: "Biflaz",
+      description:"Biflaz est une application de covoiturage pratique et abordable qui vous met en relation avec un conducteur à proximité en quelques minutes, à tout moment et en tout lieu.",
+      tools: [
+        <Image key="vueIcon" src={vueIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="quasarIcon"
+          src={quasarIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="piniaIcon"
+          src={piniaIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="capacitor"
+          src={capacitor}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: folder,
+      href: "https://drive.google.com/file/d/1VMbvcfT99k77-ouXhq7-cvQuPW8P9PiB/view?usp=sharing",
+    },
+
+     {
+      title: "monbarra",
+      description:"Nous vous proposons des offres d'emploi provenant du monde entier.",
+      tools: [
+        <Image key="vueIcon" src={vueIcon} className="" alt="icon" width={30} />,
+        <Image
+          key="quasarIcon"
+          src={quasarIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="piniaIcon"
+          src={piniaIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="capacitor"
+          src={capacitor}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: folder,
+      href: "https://drive.google.com/file/d/1CZUcxdQ5AdqMCklE7tVHREs1Uc34vfH0/view",
+    },
 
     {
       title: "Datagreff",
