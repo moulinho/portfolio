@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/favicon.ico":{"initialHeaders":{"cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon","x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"},"experimentalBypassFor":[{"type":"header","key":"Next-Action"},{"type":"header","key":"content-type","value":"multipart/form-data;.*"}],"initialRevalidateSeconds":false,"srcRoute":"/favicon.ico","dataRoute":null,"allowHeader":["host","x-matched-path","x-prerender-revalidate","x-prerender-revalidate-if-generated","x-next-revalidated-tags","x-next-revalidate-tag-token"]},"/":{"experimentalBypassFor":[{"type":"header","key":"Next-Action"},{"type":"header","key":"content-type","value":"multipart/form-data;.*"}],"initialRevalidateSeconds":false,"srcRoute":"/","dataRoute":"/index.rsc","allowHeader":["host","x-matched-path","x-prerender-revalidate","x-prerender-revalidate-if-generated","x-next-revalidated-tags","x-next-revalidate-tag-token"]}},"dynamicRoutes":{},"notFoundRoutes":[],"preview":{"previewModeId":"451241ba407491a8459955df51850785","previewModeSigningKey":"c47027992a1b55bdff894b1e9b659b3f199898fe299a9c56f42c83b3596eabc8","previewModeEncryptionKey":"35e84485a1c1df156cd3178102fa836c643c8a3b511936e08e953a910e71c00f"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "8e17c8babf7e82d0980786971d969ae3",
+    "previewModeSigningKey": "b5ef87073ae467704fab309236bb636a6e9b405b480a66881309dcde9d221667",
+    "previewModeEncryptionKey": "389960582cb3ded51e3e27d6720a3039dbba8aca3f970c57ee27e85ee4ca554d"
+  }
+}

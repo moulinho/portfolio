@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import Section from "./Section";
 import Stacks from "./Stacks";
+import { t } from "i18next";
 
 type InformationSectionProps = {
   image: string;
@@ -32,12 +33,11 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
   return (
     <div className="text-center lg:text-left ">
       <h1>
-        <span className="text-4xl font-bold">Sereme Abdoulaye</span>
+        <span className="text-4xl font-bold">{t('hero.name')}</span>
       </h1>
-      <h3 className="text-xl text-gray-600 font-semibold mt-2">Ingénieur logiciel</h3>
+      <h3 className="text-xl text-gray-600 font-semibold mt-2">{t('hero.title')}</h3>
       <p className="mt-4 text-gray-700">
-        Je crée des expériences numériques accessibles et parfaites pour le Web
-        et Mobile.
+        {t('hero.description')}
       </p>
       <div className="flex justify-center lg:justify-start items-center gap-4 mt-6">
         {Icons.map((icon, index) => (

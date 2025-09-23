@@ -1,5 +1,5 @@
-// import Image from "next/image";
 "use client";
+import '../i18n/config';
 import Image from "next/image";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -24,6 +24,7 @@ import vueIcon from "../../public/vue.svg";
 import quasarIcon from "../../public/quasar.svg";
 import piniaIcon from "../../public/Pinia.svg";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import ExperienceCard from "./components/ExperienceCard";
 import ProjectCard from "./components/ProjectCard";
 import Link from "next/link";
@@ -35,6 +36,8 @@ import AboutSection from "./components/About";
 import Waves from "react-animated-waves";
 
 const Home = () => {
+  const { t } = useTranslation();
+  
   const experiences = [
     {
       role: null,
@@ -48,7 +51,7 @@ const Home = () => {
               <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
               <h3 className="text-lg font-semibold">
-                Chef d&apos;équipe Front-End{" "}
+                {t('experience.legafrik_lead')}{" "}
                 <Link href="https://www.legafrik.com/">
                   <span className="text-blue-500 hover:underline">
                     Legafrik
@@ -56,24 +59,17 @@ const Home = () => {
                   .
                   <br />
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-600">
-                    sept. 2024 - Mars 2025 | Abidjan, Côte d’Ivoire
+                    {t('experience.legafrik_lead_date')}
                   </time>
                 </Link>
               </h3>
 
               <p className="mb-4 text-base font-normal ">
                 <div className="">
-                  En tant que chef d&apos;équipe Front-End, chargé de la
-                  coordination et l&apos;orientation de l&apos;équipe qui se
-                  concentre sur le développement des interfaces utilisateur, des
-                  fonctionnalités et l&apos;expérience utilisateur globale.
+                  {t('experience.legafrik_lead_desc1')}
                 </div>
                 <div>
-                  Travaillez en étroite collaboration avec des équipes
-                  interfonctionnelles, notamment des développeurs, des
-                  concepteurs et des chefs de produit, pour mettre en œuvre et
-                  défendre les meilleures pratiques en matière
-                  d&apos;accessibilité Web.
+                  {t('experience.legafrik_lead_desc2')}
                 </div>
               </p>
             </li>
@@ -81,23 +77,19 @@ const Home = () => {
               <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
               <h3 className="text-lg font-semibold">
-                Développeur FullStack{" "}
+                {t('experience.legafrik_fullstack')}{" "}
                 <Link href="https://www.legafrik.com/">
                   <span className="text-blue-500 hover:underline">
                     Legafrik
                   </span>{" "}
                   <br />
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-600">
-                    Juillet. 2023 - Sept. 2024 | Abidjan, Côte d’Ivoire
+                    {t('experience.legafrik_fullstack_date')}
                   </time>
                 </Link>
               </h3>
               <p className="text-base font-normal ">
-                Occupant le poste de développeur Full-Stack au sein d&apos;une
-                équipe dynamique et très travailleuse, mes tâches au quotidien
-                consistent à maintenir, optimiser et à intégrer des nouveaux
-                modules dans les application et site web de Legafrik en externes
-                et internes.
+                {t('experience.legafrik_fullstack_desc')}
               </p>
             </li>
           </ol>
@@ -106,20 +98,15 @@ const Home = () => {
       skills: ["JavaScript", "React.js", "TypeScript", "HubSpot", "Laravel"],
     },
     {
-      role: "Développeur front-end",
+      role: t('experience.jool'),
       company: (
         <Link href="https://jool-international.com/">Jool International</Link>
       ),
-      date: "Août 2021 - Février 2023",
-      location: "Abidjan, Côte d’Ivoire",
+      date: t('experience.jool_date'),
+      location: t('experience.location'),
       description: (
         <div className="text-base/7">
-          En tant que développeur Front End au sein d&apos;une équipe dynamique,
-          très travailleuse et collaborative, mes tâches au quotidien consistent
-          à créer, styliser et livrer des sites Web, des systèmes de conception,
-          des applications web et des expériences numériques de haute qualité
-          pour des clients tels que: JOOL ID, FENOPJERCI: FEDERATION NATIONALE
-          DES UNIONS DE LA JEUNESSE RURALE DE COTE D&apos;IVOIRE
+          {t('experience.jool_desc')}
         </div>
       ),
       skills: [
@@ -135,16 +122,13 @@ const Home = () => {
       ],
     },
     {
-      role: "Développeur front-end",
+      role: t('experience.wefly'),
       company: "WeFly Agri",
-      date: "Mai 2021 - Août 2021",
-      location: "Abidjan, Côte d’Ivoire",
-
+      date: t('experience.wefly_date'),
+      location: t('experience.location'),
       description: (
         <div className="text-base/7">
-          J&apos;interviens sur les projets existants en implémentant de
-          nouvelles maquettes, rendre cross-plateforme et rendre les pages
-          dynamiques en ajoutant les API.
+          {t('experience.wefly_desc')}
         </div>
       ),
       skills: [
@@ -158,18 +142,15 @@ const Home = () => {
       ],
     },
     {
-      role: "Développeur front-end",
-      location: "Abidjan, Côte d’Ivoire",
-
+      role: t('experience.wag'),
+      location: t('experience.location'),
       company: (
         <Link href="https://wagsystems.wixsite.com/wagsystems">WAGSystems</Link>
       ),
-      date: "Août 2020 -November 2020",
+      date: t('experience.wag_date'),
       description: (
         <div className="text-base/7">
-          J&apos;interviens sur les projets existants en implémentant de
-          nouvelles maquettes, rendre cross-plateforme et rendre les pages
-          dynamiques en ajoutant les API.
+          {t('experience.wag_desc')}
         </div>
       ),
       skills: ["JavaScript", "Php", "Jquery"],
@@ -186,15 +167,13 @@ const Home = () => {
       href: "https://www.linkedin.com/in/abdoulaye-sereme-6786441bb/",
     },
     { icon: gmail, href: "mailto:seremeabd@gmail.com" },
-
     { icon: github1, href: "https://github.com/moulinho" },
   ];
 
   const projects = [
     {
       title: "Moide-ferme",
-      description:
-        "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
+      description: t('projects.moide_ferme.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -222,11 +201,9 @@ const Home = () => {
       icon: folder,
       href: "https://moide-ferme.ci/",
     },
-
     {
       title: "Datagreff",
-      description:
-        "Datagreffe est une plateforme qui vous permet d’accéder et de collecter toutes les informations légales, juridiques et financières sur les entreprises de votre choix.",
+      description: t('projects.datagreff.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -256,8 +233,7 @@ const Home = () => {
     },
     {
       title: "Legafrik",
-      description:
-        "Legafrik est une plateforme qui permet à chacun de créer son entreprise en générant des documents de création en formats PDF et Word à partir d’un formulaire.",
+      description: t('projects.legafrik.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -287,8 +263,7 @@ const Home = () => {
     },
     {
       title: "MonBarra",
-      description:
-        "Site d'offre d'emploi de vos rêves avec nous avec un design simples  et un parcour utilisateur fluide.",
+      description: t('projects.monbarra.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -314,13 +289,11 @@ const Home = () => {
         />,
       ],
       icon: github,
-      // repos: "https://github.com/moulinho/Movie-Store-QuasarFramework",
       href: "https://moulinho.github.io/",
     },
     {
       title: "ZIUM",
-      description:
-        "Une application web de vente de bijoux, vetement et de chapeau.",
+      description: t('projects.zium.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -339,13 +312,11 @@ const Home = () => {
         />,
       ],
       icon: github,
-      // repos: "https://github.com/moulinho/Ziums",
       href: "https://ziums.vercel.app/",
     },
     {
-      title: "Création de carte avec illustration",
-      description:
-        "Laissez libre cours à votre imagination et faites passer vos messages de manière inoubliable !",
+      title: t('projects.card_creation.title'),
+      description: t('projects.card_creation.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -374,10 +345,9 @@ const Home = () => {
       repos: "https://github.com/moulinho/carte-project",
       href: "https://carte-project.vercel.app/",
     },
-
     {
-      title: "Shopping website",
-      description: "Une application web de vente de vetement et d’accessoir.",
+      title: t('projects.shopping.title'),
+      description: t('projects.shopping.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -407,8 +377,8 @@ const Home = () => {
       href: "https://shopping-website-nuxt3-i18n-pinia.vercel.app/",
     },
     {
-      title: "Movie store",
-      description: "Application de selection de films et de series.",
+      title: t('projects.movie_store.title'),
+      description: t('projects.movie_store.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -437,10 +407,9 @@ const Home = () => {
       repos: "https://github.com/moulinho/Movie-Store-QuasarFramework",
       href: "https://movie-store-quasar-framework.vercel.app/#/",
     },
-
     {
-      title: "Stiky note",
-      description: "Application de prise de note.",
+      title: t('projects.sticky_note.title'),
+      description: t('projects.sticky_note.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -456,8 +425,8 @@ const Home = () => {
       href: "https://sticky-notes-sage-xi.vercel.app/",
     },
     {
-      title: "Particule animate",
-      description: "Application de particule animée.",
+      title: t('projects.particle_animate.title'),
+      description: t('projects.particle_animate.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -472,10 +441,9 @@ const Home = () => {
       repos: "https://github.com/moulinho/animation-canvas",
       href: "https://animation-canvas.vercel.app/",
     },
-
     {
-      title: "Happy new year",
-      description: "Application de voeux de bonne année.",
+      title: t('projects.happy_new_year.title'),
+      description: t('projects.happy_new_year.description'),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -523,7 +491,8 @@ const Home = () => {
   useEffect(() => {
     const controls = animate(count, 100, { duration: 3 });
     return () => controls.stop();
-  }, []);
+  }, [count]);
+  
   const loadingPage = () => {
     return (
       <div className="flex flex-col text-center items-center justify-center min-h-screen">
@@ -568,13 +537,11 @@ const Home = () => {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="container mx-auto px-4"
               >
-                {/* About Section */}
-                <Section title="A propos" id="A propos">
+                <Section title={t('sections.about')} id="about">
                   <AboutSection />
                 </Section>
 
-                {/* Experiences Section */}
-                <Section title="Expériences" id="experiences">
+                <Section title={t('sections.experiences')} id="experiences">
                   <span>
                     {experiences.map((exp, index) => (
                       <ExperienceCard key={index} {...exp} />
@@ -582,8 +549,7 @@ const Home = () => {
                   </span>
                 </Section>
 
-                {/* Projects Section */}
-                <Section title="Projets" id="Projets">
+                <Section title={t('sections.projects')} id="projects">
                   <div
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
                     id="projects"
@@ -597,7 +563,7 @@ const Home = () => {
                           duration: 0.6,
                           ease: "easeOut",
                           delay: index * 0.2,
-                        }} // Delay each item
+                        }}
                         viewport={{ once: true, amount: 0.2 }}
                       >
                         <ProjectCard {...project} />
