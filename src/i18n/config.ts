@@ -72,6 +72,14 @@ const resources = {
           description:
             "Moide-ferme is a platform for creating and selling livestock products such as equipment, food and consumer products.",
         },
+        mobile_biflaz: {
+          description:
+            "Mobile Biflaz is a convenient and affordable carpooling application that connects you with a nearby driver in minutes, anytime and anywhere.",
+        },
+        mobile_monbarra: {
+          description:
+            "We offer you job offers from all over the world.",
+        },
         datagreff: {
           description:
             "Datagreffe is a platform that allows you to access and collect all legal, judicial and financial information on companies of your choice.",
@@ -187,6 +195,16 @@ const resources = {
           description:
             "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
         },
+
+        mobile_biflaz: {
+          description:
+            "Mobile Biflaz est une application de covoiturage pratique et abordable qui vous met en relation avec un conducteur à proximité en quelques minutes, à tout moment et en tout lieu.",
+        },
+        mobile_monbarra: {
+          description:
+            "Nous vous proposons des offres d'emploi provenant du monde entier.",
+        },
+
         datagreff: {
           description:
             "Datagreffe est une plateforme qui vous permet d'accéder et de collecter toutes les informations légales, juridiques et financières sur les entreprises de votre choix.",

@@ -1,9 +1,10 @@
 "use client";
-import '../i18n/config';
+import "../i18n/config";
 import Image from "next/image";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import whatsapp from "../../public/whatsapp.svg";
+import capacitor from "../../public/capacitor.png";
 import github1 from "../../public/github1.svg";
 import github from "../../public/github.svg";
 import gmail from "../../public/gmail.svg";
@@ -24,7 +25,7 @@ import vueIcon from "../../public/vue.svg";
 import quasarIcon from "../../public/quasar.svg";
 import piniaIcon from "../../public/Pinia.svg";
 import React, { useEffect, useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import ExperienceCard from "./components/ExperienceCard";
 import ProjectCard from "./components/ProjectCard";
 import Link from "next/link";
@@ -37,7 +38,7 @@ import Waves from "react-animated-waves";
 
 const Home = () => {
   const { t } = useTranslation();
-  
+
   const experiences = [
     {
       role: null,
@@ -51,7 +52,7 @@ const Home = () => {
               <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
               <h3 className="text-lg font-semibold">
-                {t('experience.legafrik_lead')}{" "}
+                {t("experience.legafrik_lead")}{" "}
                 <Link href="https://www.legafrik.com/">
                   <span className="text-blue-500 hover:underline">
                     Legafrik
@@ -59,37 +60,33 @@ const Home = () => {
                   .
                   <br />
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-600">
-                    {t('experience.legafrik_lead_date')}
+                    {t("experience.legafrik_lead_date")}
                   </time>
                 </Link>
               </h3>
 
               <p className="mb-4 text-base font-normal ">
-                <div className="">
-                  {t('experience.legafrik_lead_desc1')}
-                </div>
-                <div>
-                  {t('experience.legafrik_lead_desc2')}
-                </div>
+                <div className="">{t("experience.legafrik_lead_desc1")}</div>
+                <div>{t("experience.legafrik_lead_desc2")}</div>
               </p>
             </li>
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
               <h3 className="text-lg font-semibold">
-                {t('experience.legafrik_fullstack')}{" "}
+                {t("experience.legafrik_fullstack")}{" "}
                 <Link href="https://www.legafrik.com/">
                   <span className="text-blue-500 hover:underline">
                     Legafrik
                   </span>{" "}
                   <br />
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-600">
-                    {t('experience.legafrik_fullstack_date')}
+                    {t("experience.legafrik_fullstack_date")}
                   </time>
                 </Link>
               </h3>
               <p className="text-base font-normal ">
-                {t('experience.legafrik_fullstack_desc')}
+                {t("experience.legafrik_fullstack_desc")}
               </p>
             </li>
           </ol>
@@ -98,16 +95,14 @@ const Home = () => {
       skills: ["JavaScript", "React.js", "TypeScript", "HubSpot", "Laravel"],
     },
     {
-      role: t('experience.jool'),
+      role: t("experience.jool"),
       company: (
         <Link href="https://jool-international.com/">Jool International</Link>
       ),
-      date: t('experience.jool_date'),
-      location: t('experience.location'),
+      date: t("experience.jool_date"),
+      location: t("experience.location"),
       description: (
-        <div className="text-base/7">
-          {t('experience.jool_desc')}
-        </div>
+        <div className="text-base/7">{t("experience.jool_desc")}</div>
       ),
       skills: [
         "JavaScript",
@@ -122,14 +117,12 @@ const Home = () => {
       ],
     },
     {
-      role: t('experience.wefly'),
+      role: t("experience.wefly"),
       company: "WeFly Agri",
-      date: t('experience.wefly_date'),
-      location: t('experience.location'),
+      date: t("experience.wefly_date"),
+      location: t("experience.location"),
       description: (
-        <div className="text-base/7">
-          {t('experience.wefly_desc')}
-        </div>
+        <div className="text-base/7">{t("experience.wefly_desc")}</div>
       ),
       skills: [
         "JavaScript",
@@ -142,16 +135,14 @@ const Home = () => {
       ],
     },
     {
-      role: t('experience.wag'),
-      location: t('experience.location'),
+      role: t("experience.wag"),
+      location: t("experience.location"),
       company: (
         <Link href="https://wagsystems.wixsite.com/wagsystems">WAGSystems</Link>
       ),
-      date: t('experience.wag_date'),
+      date: t("experience.wag_date"),
       description: (
-        <div className="text-base/7">
-          {t('experience.wag_desc')}
-        </div>
+        <div className="text-base/7">{t("experience.wag_desc")}</div>
       ),
       skills: ["JavaScript", "Php", "Jquery"],
     },
@@ -171,39 +162,150 @@ const Home = () => {
   ];
 
   const projects = [
+    // {
+    //   title: "Moide-ferme",
+    //   description:
+    //     "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
+    //   tools: [
+    //     <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
+    //     <Image
+    //       key="reactIcon"
+    //       src={reactIcon}
+    //       className=""
+    //       alt="icon"
+    //       width={30}
+    //     />,
+    //     <Image
+    //       key="reduxIocn"
+    //       src={reduxIcon}
+    //       className=""
+    //       alt="icon"
+    //       width={30}
+    //     />,
+    //     <Image
+    //       key="tailwindIcon"
+    //       src={tailwindIcon}
+    //       className=""
+    //       alt="icon"
+    //       width={30}
+    //     />,
+    //   ],
+    //   icon: folder,
+    //   href: "https://moide-ferme.ci/",
+    // },
+
     {
       title: "Moide-ferme",
-      description: t('projects.moide_ferme.description'),
+      description: t("projects.moide_ferme.description"),
       tools: [
-        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
-          key="reactIcon"
-          src={reactIcon}
+          key="vueIcon"
+          src={vueIcon}
           className=""
           alt="icon"
           width={30}
         />,
         <Image
-          key="reduxIocn"
-          src={reduxIcon}
+          key="quasarIcon"
+          src={quasarIcon}
           className=""
           alt="icon"
           width={30}
         />,
         <Image
-          key="tailwindIcon"
-          src={tailwindIcon}
+          key="piniaIcon"
+          src={piniaIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="capacitor"
+          src={capacitor}
           className=""
           alt="icon"
           width={30}
         />,
       ],
       icon: folder,
-      href: "https://moide-ferme.ci/",
+      href: "https://drive.google.com/file/d/1VMbvcfT99k77-ouXhq7-cvQuPW8P9PiB/view?usp=sharing",
+    },
+
+    {
+      title: "Mobile Biflaz",
+      description: t("projects.mobile_biflaz.description"),
+      tools: [
+        <Image
+          key="vueIcon"
+          src={vueIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="quasarIcon"
+          src={quasarIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="piniaIcon"
+          src={piniaIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="capacitor"
+          src={capacitor}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: folder,
+      href: "https://drive.google.com/file/d/1VMbvcfT99k77-ouXhq7-cvQuPW8P9PiB/view?usp=sharing",
+    },
+    {
+      title: "Mobile monbarra",
+      description: t("projects.mobile_monbarra.description"),
+      tools: [
+        <Image
+          key="vueIcon"
+          src={vueIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="quasarIcon"
+          src={quasarIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="piniaIcon"
+          src={piniaIcon}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+        <Image
+          key="capacitor"
+          src={capacitor}
+          className=""
+          alt="icon"
+          width={30}
+        />,
+      ],
+      icon: folder,
+      href: "https://drive.google.com/file/d/1CZUcxdQ5AdqMCklE7tVHREs1Uc34vfH0/view",
     },
     {
       title: "Datagreff",
-      description: t('projects.datagreff.description'),
+      description: t("projects.datagreff.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -233,7 +335,7 @@ const Home = () => {
     },
     {
       title: "Legafrik",
-      description: t('projects.legafrik.description'),
+      description: t("projects.legafrik.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -263,7 +365,7 @@ const Home = () => {
     },
     {
       title: "MonBarra",
-      description: t('projects.monbarra.description'),
+      description: t("projects.monbarra.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -293,7 +395,7 @@ const Home = () => {
     },
     {
       title: "ZIUM",
-      description: t('projects.zium.description'),
+      description: t("projects.zium.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -315,8 +417,8 @@ const Home = () => {
       href: "https://ziums.vercel.app/",
     },
     {
-      title: t('projects.card_creation.title'),
-      description: t('projects.card_creation.description'),
+      title: t("projects.card_creation.title"),
+      description: t("projects.card_creation.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -346,8 +448,8 @@ const Home = () => {
       href: "https://carte-project.vercel.app/",
     },
     {
-      title: t('projects.shopping.title'),
-      description: t('projects.shopping.description'),
+      title: t("projects.shopping.title"),
+      description: t("projects.shopping.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -377,8 +479,8 @@ const Home = () => {
       href: "https://shopping-website-nuxt3-i18n-pinia.vercel.app/",
     },
     {
-      title: t('projects.movie_store.title'),
-      description: t('projects.movie_store.description'),
+      title: t("projects.movie_store.title"),
+      description: t("projects.movie_store.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -408,8 +510,8 @@ const Home = () => {
       href: "https://movie-store-quasar-framework.vercel.app/#/",
     },
     {
-      title: t('projects.sticky_note.title'),
-      description: t('projects.sticky_note.description'),
+      title: t("projects.sticky_note.title"),
+      description: t("projects.sticky_note.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -425,8 +527,8 @@ const Home = () => {
       href: "https://sticky-notes-sage-xi.vercel.app/",
     },
     {
-      title: t('projects.particle_animate.title'),
-      description: t('projects.particle_animate.description'),
+      title: t("projects.particle_animate.title"),
+      description: t("projects.particle_animate.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -442,8 +544,8 @@ const Home = () => {
       href: "https://animation-canvas.vercel.app/",
     },
     {
-      title: t('projects.happy_new_year.title'),
-      description: t('projects.happy_new_year.description'),
+      title: t("projects.happy_new_year.title"),
+      description: t("projects.happy_new_year.description"),
       tools: [
         <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
@@ -492,7 +594,7 @@ const Home = () => {
     const controls = animate(count, 100, { duration: 3 });
     return () => controls.stop();
   }, [count]);
-  
+
   const loadingPage = () => {
     return (
       <div className="flex flex-col text-center items-center justify-center min-h-screen">
@@ -520,7 +622,6 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="container mx-auto px-4"
         >
-          
           <Header />
           <div className="flex flex-col md:flex-row justify-evenly">
             <div className="lg:w-4/12 mt-2 lg:mt-0 lg:pl-12">
@@ -537,11 +638,11 @@ const Home = () => {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="container mx-auto px-4"
               >
-                <Section title={t('sections.about')} id="about">
+                <Section title={t("sections.about")} id="about">
                   <AboutSection />
                 </Section>
 
-                <Section title={t('sections.experiences')} id="experiences">
+                <Section title={t("sections.experiences")} id="experiences">
                   <span>
                     {experiences.map((exp, index) => (
                       <ExperienceCard key={index} {...exp} />
@@ -549,7 +650,7 @@ const Home = () => {
                   </span>
                 </Section>
 
-                <Section title={t('sections.projects')} id="projects">
+                <Section title={t("sections.projects")} id="projects">
                   <div
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
                     id="projects"

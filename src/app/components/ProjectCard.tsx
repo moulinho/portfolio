@@ -29,7 +29,7 @@ const ProjectCard = ({
       <Image src={folder} className="" alt="icon" width={24} />
       <div className="flex items-center gap-4">
         {repos && (
-          <Link href={repos}>
+          <Link href={repos} target="_blank" rel="noopener noreferrer">
             <Image
               src={icon}
               className="hover:opacity-80 transition-opacity duration-200"
@@ -38,7 +38,7 @@ const ProjectCard = ({
             />
           </Link>
         )}
-        <Link href={href}>
+        <Link href={href} target="_blank" rel="noopener noreferrer">
           <Image
             src={linkIcon}
             className="hover:opacity-80 transition-opacity duration-200"
