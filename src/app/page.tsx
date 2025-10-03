@@ -162,74 +162,38 @@ const Home = () => {
   ];
 
   const projects = [
-    // {
-    //   title: "Moide-ferme",
-    //   description:
-    //     "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
-    //   tools: [
-    //     <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
-    //     <Image
-    //       key="reactIcon"
-    //       src={reactIcon}
-    //       className=""
-    //       alt="icon"
-    //       width={30}
-    //     />,
-    //     <Image
-    //       key="reduxIocn"
-    //       src={reduxIcon}
-    //       className=""
-    //       alt="icon"
-    //       width={30}
-    //     />,
-    //     <Image
-    //       key="tailwindIcon"
-    //       src={tailwindIcon}
-    //       className=""
-    //       alt="icon"
-    //       width={30}
-    //     />,
-    //   ],
-    //   icon: folder,
-    //   href: "https://moide-ferme.ci/",
-    // },
-
     {
       title: "Moide-ferme",
-      description: t("projects.moide_ferme.description"),
+      description:
+        "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
       tools: [
+        <Image key="jsIcon" src={jsIcon} className="" alt="icon" width={30} />,
         <Image
-          key="vueIcon"
-          src={vueIcon}
+          key="reactIcon"
+          src={reactIcon}
           className=""
           alt="icon"
           width={30}
         />,
         <Image
-          key="quasarIcon"
-          src={quasarIcon}
+          key="reduxIocn"
+          src={reduxIcon}
           className=""
           alt="icon"
           width={30}
         />,
         <Image
-          key="piniaIcon"
-          src={piniaIcon}
-          className=""
-          alt="icon"
-          width={30}
-        />,
-        <Image
-          key="capacitor"
-          src={capacitor}
+          key="tailwindIcon"
+          src={tailwindIcon}
           className=""
           alt="icon"
           width={30}
         />,
       ],
       icon: folder,
-      href: "https://drive.google.com/file/d/1VMbvcfT99k77-ouXhq7-cvQuPW8P9PiB/view?usp=sharing",
+      href: "https://moide-ferme.ci/",
     },
+
 
     {
       title: "Mobile Biflaz",
