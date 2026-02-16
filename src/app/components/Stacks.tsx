@@ -1,23 +1,24 @@
 import React from "react";
-import jsIcon from "../../../public/javascript.svg";
-import vueIcon from "../../../public/vue.svg";
-import reactIcon from "../../../public/react.svg";
-import sassIcon from "../../../public/scss.svg";
-import bootstrapIcon from "../../../public/Bootstrap.svg";
-import tailwindIcon from "../../../public/tailwind.svg";
-import nuxtIcon from "../../../public/nuxt.svg";
-import quasarIcon from "../../../public/quasar.svg";
-import angular from "../../../public/angularLogo.png"
-
-import nextIcon from "../../../public/nextjs.svg";
-import nodeIcon from "../../../public/node.svg";
-import expressIcon from "../../../public/express.svg";
-import mongoIcon from "../../../public/mongodb.svg";
-import mysqlIcon from "../../../public/mysql.svg";
-import typescript from "../../../public/typescript.svg";
-import NestjsIcon from "../../../public/NestjsIcon.jpg";
-import StrapiIcon from "../../../public/StrapiIcon.png";
 import Image from "next/image";
+
+const jsIcon = "/javascript.svg";
+const vueIcon = "/vue.svg";
+const reactIcon = "/react.svg";
+const sassIcon = "/scss.svg";
+const bootstrapIcon = "/Bootstrap.svg";
+const tailwindIcon = "/tailwind.svg";
+const nuxtIcon = "/nuxt.svg";
+const quasarIcon = "/quasar.svg";
+const angular = "/angularLogo.png";
+
+const nextIcon = "/nextjs.svg";
+const nodeIcon = "/node.svg";
+const expressIcon = "/express.svg";
+const mongoIcon = "/mongodb.svg";
+const mysqlIcon = "/mysql.svg";
+const typescript = "/typescript.svg";
+const NestjsIcon = "/NestjsIcon.jpg";
+const StrapiIcon = "/StrapiIcon.png";
 
 const frontendStacks = [
   { name: "JavaScript", icon: jsIcon },
@@ -71,7 +72,13 @@ const Stacks = () => {
               key={index}
               className="flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <Image src={stack.icon} alt={stack.name} width={30} height={30}  />
+              <Image 
+              src={stack.icon} 
+              alt={stack.name} 
+              width={stack.icon === NestjsIcon || stack.icon === StrapiIcon ? 40 : 30} 
+              height={stack.icon === NestjsIcon || stack.icon === StrapiIcon ? 40 : 30}
+              className="w-10 h-10"
+              />
               <p className="text-sm mt-2 text-gray-700">{stack.name}</p>
             </div>
           ))}
