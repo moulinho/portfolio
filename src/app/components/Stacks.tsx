@@ -104,7 +104,7 @@ const Stacks = () => {
                 alt={stack.name}
                 width={30}
                 height={30}
-                className={stack.icon === NestjsIcon || stack.icon === StrapiIcon ? "w-20 h-12" : "w-10 h-10"}
+                className={stack.icon === NestjsIcon || stack.icon === StrapiIcon ? "w-16 h-10" : "w-10 h-10"}
               />
               <p className="text-sm mt-2 text-gray-700">{stack.name}</p>
             </div>
