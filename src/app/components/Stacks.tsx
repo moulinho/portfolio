@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const jsIcon = "/javascript.svg";
 const vueIcon = "/vue.svg";
@@ -17,8 +18,13 @@ const expressIcon = "/express.svg";
 const mongoIcon = "/mongodb.svg";
 const mysqlIcon = "/mysql.svg";
 const typescript = "/typescript.svg";
-const NestjsIcon = "/NestjsIcon.jpg";
+const NestjsIcon = "/NestjsIcon.png";
 const StrapiIcon = "/StrapiIcon.png";
+
+
+
+const figmaIcon = "/figma.svg";
+const adobeXDIcon = "/adobeXD.png";
 
 const frontendStacks = [
   { name: "JavaScript", icon: jsIcon },
@@ -36,16 +42,37 @@ const frontendStacks = [
 
 const backendStacks = [
   { name: "Node.js", icon: nodeIcon },
-  {name:'Nest.js', icon:NestjsIcon},
-  {name:'Strapi.js', icon:StrapiIcon},
+  { name: 'Nest.js', icon: NestjsIcon },
+  { name: 'Strapi.js', icon: StrapiIcon },
   { name: "Express.js", icon: expressIcon },
   { name: "MongoDB", icon: mongoIcon },
   { name: "MySQL", icon: mysqlIcon },
 ];
 
+const designStacks = [
+  { name: "Figma", icon: figmaIcon, link: "https://www.figma.com/design/iTITS5oXOu2UyhdcAiKVDd/serresIvore?node-id=64-20&t=7G7Z6DPjHDNjFHT2-1" },
+
+];
+
 const Stacks = () => {
   return (
     <div className=" ">
+
+
+      {/* Design Stacks */}
+      <div className="mb-8">
+        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">Design</h3>
+        <div className="flex flex-wrap gap-6">
+          {designStacks.map((stack, index) => (
+            <Link href={stack.link} target="_blank" key={index}
+              className="flex flex-col items-center transition-transform transform hover:scale-105">
+
+              <Image src={stack.icon} alt={stack.name} width={30} height={30} className={`${stack.icon === adobeXDIcon ? "w-16 " : "w-10 "} h-10`} />
+              <p className="text-sm mt-2 text-gray-700">{stack.name}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
 
       {/* Front-end Stacks */}
       <div className="mb-8">
@@ -72,18 +99,20 @@ const Stacks = () => {
               key={index}
               className="flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <Image 
-              src={stack.icon} 
-              alt={stack.name} 
-              width={stack.icon === NestjsIcon || stack.icon === StrapiIcon ? 40 : 30} 
-              height={stack.icon === NestjsIcon || stack.icon === StrapiIcon ? 40 : 30}
-              className="w-10 h-10"
+              <Image
+                src={stack.icon}
+                alt={stack.name}
+                width={30}
+                height={30}
+                className={stack.icon === NestjsIcon || stack.icon === StrapiIcon ? "w-20 h-12" : "w-10 h-10"}
               />
               <p className="text-sm mt-2 text-gray-700">{stack.name}</p>
             </div>
           ))}
         </div>
       </div>
+
+      
     </div>
   );
 };

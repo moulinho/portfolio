@@ -51,7 +51,7 @@ const Home = () => {
       skills: [
         "JavaScript",
         "Vue.js",
-        "Nux.js",
+        "Nuxt.js",
         "React.js",
         "Next.js",
         "Angular",
@@ -91,10 +91,10 @@ const Home = () => {
                 </Link>
               </h3>
 
-              <p className="mb-4 text-base font-normal ">
-                <div className="">{t("experience.legafrik_lead_desc1")}</div>
-                <div>{t("experience.legafrik_lead_desc2")}</div>
-              </p>
+              <div className="mb-4 text-base font-normal ">
+                <p className="">{t("experience.legafrik_lead_desc1")}</p>
+                <p>{t("experience.legafrik_lead_desc2")}</p>
+              </div>
             </li>
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
