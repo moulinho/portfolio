@@ -40,6 +40,32 @@ const Home = () => {
   const { t } = useTranslation();
 
   const experiences = [
+  {
+     role: t("experience.freelance"),
+      company: "Freelance",
+      date: t("experience.freelance_date"),
+      location: t("experience.freelance_location"),
+      description: (
+        <div className="text-base/7">{t("experience.freelance_desc")}</div>
+      ),
+      skills: [
+        "JavaScript",
+        "Vue.js",
+        "Nux.js",
+        "React.js",
+        "Next.js",
+        "Angular",
+        "React Native",
+        "Capacitor",
+        "Node.js",
+        "Nest.js",
+        "Strapi",
+        "Directus",
+        "Quasar Framework",
+        "Figma",
+        "Adobe XD",
+      ],
+  },
     {
       role: null,
       company: null,

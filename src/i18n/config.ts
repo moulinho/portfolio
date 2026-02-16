@@ -57,6 +57,12 @@ const resources = {
         jool_date: "August 2021 - February 2023",
         jool_desc:
           "As a Front End developer within a dynamic, hardworking and collaborative team, my daily tasks consist of creating, styling and delivering high-quality websites, design systems, web applications and digital experiences for clients such as: JOOL ID, FENOPJERCI: NATIONAL FEDERATION OF RURAL YOUTH UNIONS OF CÔTE D'IVOIRE",
+
+        freelance: "Full-Satck Developer",
+        freelance_date: "Juillet 2023",
+         freelance_desc: "",
+        freelance_location:'',
+        
         wefly: "Front-end Developer",
         wefly_date: "May 2021 - August 2021",
         wefly_desc:
@@ -180,6 +186,11 @@ const resources = {
         jool_date: "Août 2021 - Février 2023",
         jool_desc:
           "En tant que développeur Front End au sein d'une équipe dynamique, très travailleuse et collaborative, mes tâches au quotidien consistent à créer, styliser et livrer des sites Web, des systèmes de conception, des applications web et des expériences numériques de haute qualité pour des clients tels que: JOOL ID, FENOPJERCI: FEDERATION NATIONALE DES UNIONS DE LA JEUNESSE RURALE DE COTE D'IVOIRE",
+        freelance: "Ingénieur Full Stack",
+        freelance_date: "Juillet 2023",
+        freelance_desc: "",
+        freelance_location:'',
+
         wefly: "Développeur front-end",
         wefly_date: "Mai 2021 - Août 2021",
         wefly_desc:

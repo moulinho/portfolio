@@ -15,6 +15,8 @@ import expressIcon from "../../../public/express.svg";
 import mongoIcon from "../../../public/mongodb.svg";
 import mysqlIcon from "../../../public/mysql.svg";
 import typescript from "../../../public/typescript.svg";
+import NestjsIcon from "../../../public/NestjsIcon.jpg";
+import StrapiIcon from "../../../public/StrapiIcon.png";
 import Image from "next/image";
 
 const frontendStacks = [
@@ -33,6 +35,8 @@ const frontendStacks = [
 
 const backendStacks = [
   { name: "Node.js", icon: nodeIcon },
+  {name:'Nest.js', icon:NestjsIcon},
+  {name:'Strapi.js', icon:StrapiIcon},
   { name: "Express.js", icon: expressIcon },
   { name: "MongoDB", icon: mongoIcon },
   { name: "MySQL", icon: mysqlIcon },
