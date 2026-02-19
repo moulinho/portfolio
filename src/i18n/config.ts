@@ -13,7 +13,7 @@ const resources = {
         name: "Sereme Abdoulaye",
         title: "Software Engineer",
         description:
-          "I create accessible and pixel-perfect digital experiences for Web and Mobile.",
+          "As a full-stack engineer, I help companies design customized digital solutions with a focus on performance and business value.",
       },
       about: {
         paragraph1:
@@ -40,6 +40,13 @@ const resources = {
         about: "About",
         experiences: "Experiences",
         projects: "Projects",
+      },
+      projectCard: {
+        viewProject: "View {{title}} project",
+        viewRepository: "View source code",
+        folderIcon: "Project folder",
+        repositoryIcon: "Repository",
+        externalLink: "Open project",
       },
       experience: {
         legafrik_lead: "Front-End Team Lead",
@@ -142,7 +149,7 @@ const resources = {
         name: "Sereme Abdoulaye",
         title: "Ingénieur logiciel",
         description:
-          "Je crée des expériences numériques accessibles et parfaites pour le Web et Mobile.",
+          "Ingénieur Full Stack, j’aide les entreprises à concevoir des solutions digitales sur mesure avec un fort accent sur la performance et la valeur métier.",
       },
       about: {
         paragraph1:
@@ -169,6 +176,13 @@ const resources = {
         about: "A propos",
         experiences: "Expériences",
         projects: "Projets",
+      },
+      projectCard: {
+        viewProject: "Voir le projet {{title}}",
+        viewRepository: "Voir le code source",
+        folderIcon: "Dossier du projet",
+        repositoryIcon: "Dépôt",
+        externalLink: "Ouvrir le projet",
       },
       experience: {
         legafrik_lead: "Chef d'équipe Front-End",

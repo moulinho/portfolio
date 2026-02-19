@@ -21,10 +21,12 @@ const typescript = "/typescript.svg";
 const NestjsIcon = "/NestjsIcon.png";
 const StrapiIcon = "/StrapiIcon.png";
 
-
-
 const figmaIcon = "/figma.svg";
 const adobeXDIcon = "/adobeXD.png";
+
+const reactNativeIcon = "/react.svg";
+const cordovaIcon = "/cordova.svg";
+const capacitorIcon = "/capacitor.png";
 
 const frontendStacks = [
   { name: "JavaScript", icon: jsIcon },
@@ -42,48 +44,98 @@ const frontendStacks = [
 
 const backendStacks = [
   { name: "Node.js", icon: nodeIcon },
-  { name: 'Nest.js', icon: NestjsIcon },
-  { name: 'Strapi.js', icon: StrapiIcon },
+  { name: "Nest.js", icon: NestjsIcon },
+  { name: "Strapi.js", icon: StrapiIcon },
   { name: "Express.js", icon: expressIcon },
   { name: "MongoDB", icon: mongoIcon },
   { name: "MySQL", icon: mysqlIcon },
 ];
 
 const designStacks = [
-  { name: "Figma", icon: figmaIcon, link: "https://www.figma.com/design/iTITS5oXOu2UyhdcAiKVDd/serresIvore?node-id=64-20&t=7G7Z6DPjHDNjFHT2-1" },
+  {
+    name: "Figma",
+    icon: figmaIcon,
+    link: "https://www.figma.com/design/iTITS5oXOu2UyhdcAiKVDd/serresIvore?node-id=64-20&t=7G7Z6DPjHDNjFHT2-1",
+  },
+];
 
+const mobileStacks = [
+  { name: "React Native", icon: reactNativeIcon },
+  // { name: "Cordova", icon: cordovaIcon },
+  { name: "Capacitor.js", icon: capacitorIcon },
 ];
 
 const Stacks = () => {
   return (
     <div className=" ">
-
-
       {/* Design Stacks */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">Design</h3>
+        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+          Design
+        </h3>
         <div className="flex flex-wrap gap-6">
           {designStacks.map((stack, index) => (
-            <Link href={stack.link} target="_blank" key={index}
-              className="flex flex-col items-center transition-transform transform hover:scale-105">
-
-              <Image src={stack.icon} alt={stack.name} width={30} height={30} className={`${stack.icon === adobeXDIcon ? "w-16 " : "w-10 "} h-10`} />
+            <Link
+              href={stack.link}
+              target="_blank"
+              key={index}
+              className="flex flex-col items-center transition-transform transform hover:scale-105"
+            >
+              <Image
+                src={stack.icon}
+                alt={stack.name}
+                width={30}
+                height={30}
+                className={`${stack.icon === adobeXDIcon ? "w-16 " : "w-10 "} h-10`}
+              />
               <p className="text-sm mt-2 text-gray-700">{stack.name}</p>
             </Link>
           ))}
         </div>
       </div>
 
+      {/* Mobile Stacks */}
+      <div className="mb-8">
+        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+          Mobile
+        </h3>
+        <div className="flex flex-wrap gap-6">
+          {mobileStacks.map((stack, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center transition-transform transform hover:scale-105"
+            >
+              <Image
+                src={stack.icon}
+                alt={stack.name}
+                width={30}
+                height={30}
+                className="w-10 h-10"
+              />
+              <p className="text-sm mt-2 text-gray-700">{stack.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Front-end Stacks */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">Front-end</h3>
+        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+          Front-end
+        </h3>
         <div className="flex flex-wrap  gap-6">
           {frontendStacks.map((stack, index) => (
             <div
               key={index}
               className="flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <Image src={stack.icon} alt={stack.name} width={30} height={30} className="w-10 h-10" />
+              <Image
+                src={stack.icon}
+                alt={stack.name}
+                width={30}
+                height={30}
+                className="w-10 h-10"
+              />
               <p className="text-sm mt-2 text-gray-700">{stack.name}</p>
             </div>
           ))}
@@ -91,8 +143,10 @@ const Stacks = () => {
       </div>
 
       {/* Back-end Stacks */}
-      <div>
-        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">Back-end</h3>
+      <div className="mb-8">
+        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+          Back-end
+        </h3>
         <div className="flex flex-wrap gap-6">
           {backendStacks.map((stack, index) => (
             <div
@@ -111,8 +165,6 @@ const Stacks = () => {
           ))}
         </div>
       </div>
-
-      
     </div>
   );
 };

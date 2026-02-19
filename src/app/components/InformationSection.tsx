@@ -1,15 +1,14 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-// import React, { useEffect } from "react";
-// import QrCodeWithLogo from 'qrcode-with-logos'
 
 import Section from "./Section";
 import Stacks from "./Stacks";
 import { t } from "i18next";
+import { SocialIcon } from "@/types";
 
 type InformationSectionProps = {
-  image: string;
-  Icons: { icon: string; href: string }[];
+  image: StaticImageData;
+  Icons: SocialIcon[];
 };
 
 const InformationSection = ({  Icons }: InformationSectionProps) => {
