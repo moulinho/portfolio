@@ -136,6 +136,32 @@ const resources = {
           description: "New year wishes application.",
         },
       },
+      designProjects: {
+        moide_ferme: {
+          description:
+            "Moide-ferme is a platform for creating and selling livestock products such as equipment, food and consumer products.",
+        },
+        pharmanime: {
+          description:
+            "A digital tool for intelligent livestock management and monitoring that optimizes prevention and performance.",
+        },
+        ventura: {
+          description:
+            "A personal finance management platform that allows users to track their expenses, create budgets and get personalized financial insights.",
+        },
+        serre_ivore: {
+          description:
+            "An intelligent greenhouse management platform that enables farmers to monitor and control plant growing conditions, optimize resource use and improve agricultural yields.",
+        },
+        thea: {
+          description:
+            "Thea is a premium tea sales platform that offers a user-friendly and personalized online shopping experience for tea lovers worldwide.",
+        },
+        qcm: {
+          description:
+            "Qcm is an online questionnaire creation and management platform, allowing users to design, distribute and analyze tests and surveys efficiently.",
+        },
+      },
     },
   },
   fr: {
@@ -271,6 +297,32 @@ const resources = {
         happy_new_year: {
           title: "Happy new year",
           description: "Application de voeux de bonne année.",
+        },
+      },
+      designProjects: {
+        moide_ferme: {
+          description:
+            "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
+        },
+        pharmanime: {
+          description:
+            "Un outil numérique de gestion et suivi intelligente d'élevages qui permet d'optimiser la prévention et la performance.",
+        },
+        ventura: {
+          description:
+            "Une plateforme de gestion de finance personnelle qui permet aux utilisateurs de suivre leurs dépenses, de créer des budgets et d'obtenir des insights financiers personnalisés.",
+        },
+        serre_ivore: {
+          description:
+            "Une plateforme de gestion intelligente de serres agricoles qui permet aux agriculteurs de surveiller et de contrôler les conditions de croissance des plantes, d'optimiser l'utilisation des ressources et d'améliorer les rendements agricoles.",
+        },
+        thea: {
+          description:
+            "Thea est une plateforme de vente de thé de qualité supérieure qui offre une expérience d'achat en ligne conviviale et personnalisée pour les amateurs de thé du monde entier.",
+        },
+        qcm: {
+          description:
+            "Qcm est une plateforme de création et de gestion de questionnaires en ligne, permettant aux utilisateurs de concevoir, distribuer et analyser des tests et sondages de manière efficace.",
         },
       },
     },

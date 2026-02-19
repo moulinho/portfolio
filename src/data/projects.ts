@@ -112,43 +112,37 @@ export const projectsData: ProjectData[] = [
 export const designProjectsData: DesignProjectData[] = [
   {
     title: "Moide Ferme",
-    description:
-      "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
+    descriptionKey: "designProjects.moide_ferme.description",
     backgroundImage: "/Moide.png",
     tools: ["figma"],
   },
   {
     title: "Pharmanime",
-    description:
-      "Un outil numérique de gestion et suivie intelligente d'élevages qui permet d'optimiser la prévention et la performance.",
+    descriptionKey: "designProjects.pharmanime.description",
     backgroundImage: "/Pharmanime_1.png",
     tools: ["figma"],
   },
   {
     title: "Ventura",
-    description:
-      "Une plateforme de gestion de finance personnelle qui permet aux utilisateurs de suivre leurs dépenses, de créer des budgets et d'obtenir des insights financiers personnalisés.",
+    descriptionKey: "designProjects.ventura.description",
     backgroundImage: "/Finance_1.png",
     tools: ["figma"],
   },
   {
     title: "Serre Ivore",
-    description:
-      "Une plateforme de gestion intelligente de serres agricoles qui permet aux agriculteurs de surveiller et de contrôler les conditions de croissance des plantes, d'optimiser l'utilisation des ressources et d'améliorer les rendements agricoles.",
+    descriptionKey: "designProjects.serre_ivore.description",
     backgroundImage: "/SerreIvore.png",
     tools: ["figma"],
   },
   {
     title: "Thea",
-    description:
-      "Thea est une plateforme de vente de thé de qualité supérieure qui offre une expérience d'achat en ligne conviviale et personnalisée pour les amateurs de thé du monde entier.",
+    descriptionKey: "designProjects.thea.description",
     backgroundImage: "/The_2.png",
     tools: ["figma"],
   },
   {
     title: "Qcm",
-    description:
-      "Qcm est une plateforme de création et de gestion de questionnaires en ligne, permettant aux utilisateurs de concevoir, distribuer et analyser des tests et sondages de manière efficace.",
+    descriptionKey: "designProjects.qcm.description",
     backgroundImage: "/Qcm.png",
     tools: ["figma"],
   },
