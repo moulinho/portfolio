@@ -25,15 +25,15 @@ function Header() {
   }, [i18n]);
 
   return (
-    <div className="header sticky top-0 z-50 mb-14 w-[100vw] md:w-[30vw] mx-auto bg-orange-50 pb-5 pt-1">
-      <ul className="flex flex-wrap justify-center md:justify-evenly items-center sticky h-12 w-[90vw] md:w-[25vw] bg-black text-white mt-4 mx-auto rounded-md shadow-lg">
-        <li className="px-4 py-2 text-sm md:text-base hover:text-gray-300 transition">
+    <div className="header sticky top-0 z-50 mb-14 w-full md:w-auto mx-auto bg-orange-50 pb-5 pt-1">
+      <ul className="flex flex-nowrap justify-center md:justify-evenly items-center sticky h-12 w-[95vw] md:w-[450px] lg:w-[500px] bg-black text-white mt-4 mx-auto rounded-md shadow-lg">
+        <li className="px-3 md:px-4 py-2 text-sm md:text-base hover:text-gray-300 transition whitespace-nowrap">
           <a href="#about">{t("nav.about")}</a>
         </li>
-        <li className="px-4 py-2 text-sm md:text-base hover:text-gray-300 transition">
+        <li className="px-3 md:px-4 py-2 text-sm md:text-base hover:text-gray-300 transition whitespace-nowrap">
           <a href="#experiences">{t("nav.experiences")}</a>
         </li>
-        <li className="px-4 py-2 text-sm md:text-base hover:text-gray-300 transition">
+        <li className="px-3 md:px-4 py-2 text-sm md:text-base hover:text-gray-300 transition whitespace-nowrap">
           <a href="#projects">{t("nav.projects")}</a>
         </li>
         <li className="px-2 py-2 text-sm md:text-base">
