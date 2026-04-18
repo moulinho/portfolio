@@ -9,7 +9,7 @@ type SectionProps = {
 const Section = ({ title, children, id }: SectionProps) => (
   <section className="my-5 text-base/7" id={id}>
     <div className="flex items-center justify-between mb-4">
-    <span className="text-2xl font-bold ">{title} </span>
+    <h2 className="text-2xl font-bold ">{title}</h2>
     <span className="text-gray-500 text-sm">
       
       {title.includes("propos") && (

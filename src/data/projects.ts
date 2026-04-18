@@ -14,6 +14,7 @@ export interface DesignProjectData {
   description?: string;
   backgroundImage: string;
   tools: string[];
+  href?: string;
 }
 
 export const projectsData: ProjectData[] = [
@@ -111,22 +112,29 @@ export const projectsData: ProjectData[] = [
 
 export const designProjectsData: DesignProjectData[] = [
   {
+    title: "TransiGo",
+    descriptionKey: "designProjects.transigo.description",
+    backgroundImage: "/transiGo.png",
+    tools: ["figma","react"],
+     href: "https://transi-go-web.vercel.app/",
+  },
+  {
     title: "Moide Ferme",
     descriptionKey: "designProjects.moide_ferme.description",
     backgroundImage: "/Moide.png",
-    tools: ["figma"],
+    tools: ["figma","react"],
   },
   {
     title: "Pharmanime",
     descriptionKey: "designProjects.pharmanime.description",
     backgroundImage: "/Pharmanime_1.png",
-    tools: ["figma"],
+    tools: ["figma","react"],
   },
   {
     title: "Ventura",
     descriptionKey: "designProjects.ventura.description",
     backgroundImage: "/Finance_1.png",
-    tools: ["figma"],
+    tools: ["figma","vue","quasar"],
   },
   {
     title: "Serre Ivore",

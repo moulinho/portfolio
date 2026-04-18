@@ -31,10 +31,8 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
 
   return (
     <div className="text-center lg:text-left ">
-      <h1>
-        <span className="text-4xl font-bold">{t('hero.name')}</span>
-      </h1>
-      <h3 className="text-xl text-gray-600 font-semibold mt-2">{t('hero.title')}</h3>
+      <h1 className="text-4xl font-bold">{t('hero.name')}</h1>
+      <p className="text-xl text-gray-600 font-semibold mt-2">{t('hero.title')}</p>
       <p className="mt-4 text-gray-700">
         {t('hero.description')}
       </p>
@@ -44,8 +42,8 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
             key={index}
             className="bg-white p-3 rounded-full hover:shadow-lg transition-all"
           >
-            <Link href={icon.href} target="_blank">
-              <Image src={icon.icon} alt="icon" width={30} />
+            <Link href={icon.href} target="_blank" rel="noopener noreferrer" aria-label={icon.label}>
+              <Image src={icon.icon} alt="" aria-hidden="true" width={30} />
             </Link>
           </span>
         ))}
@@ -63,10 +61,10 @@ const InformationSection = ({  Icons }: InformationSectionProps) => {
       </div> */}
       {/* <div className="flex justify-between  lg:justify-start  gap-4 mt-6"> */}
        
-      <div className="animate-bounce">
-        <div className=" h-24 w-24 bg-white  rounded-full animate-bounce"></div>
-        <div className=" h-24 w-24 bg-black  rounded-md  animate-bounce"></div>
-        <div className=" h-24 w-24 bg-black rotate-45 transform "></div>
+      <div className="animate-bounce" aria-hidden="true">
+        <div className="h-24 w-24 bg-white rounded-full animate-bounce"></div>
+        <div className="h-24 w-24 bg-black rounded-md animate-bounce"></div>
+        <div className="h-24 w-24 bg-black rotate-45 transform"></div>
       </div>
 
       {/* <Image src={''} id="image" alt="" /> */}

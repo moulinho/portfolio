@@ -1,13 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import folder from "../../../public/folder.svg";
 import TechIcon from "./TechIcon";
+import Link from "next/link";
+import linkIcon from "../../../public/link.svg";
+import { useTranslation } from "react-i18next";
 
 type ProjectDesignProps = {
   title: string;
   description: string;
   tools: string[];
   backgroundImage?: string;
+  href?: string;
+  icon?: "folder" | "file" | "github";
 };
 
 const ProjectDesign = ({
@@ -15,100 +20,98 @@ const ProjectDesign = ({
   description,
   tools,
   backgroundImage,
+  href,
 }: ProjectDesignProps) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
-  // Lazy loading with Intersection Observer
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: "100px",
-        threshold: 0,
-      }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Load image only when in view
-  useEffect(() => {
-    if (backgroundImage && isInView) {
-      const img = new window.Image();
-      img.src = backgroundImage;
-      img.onload = () => setImageLoaded(true);
-    }
-  }, [backgroundImage, isInView]);
-
-  return (
+  const card = (
     <div
-      ref={cardRef}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="w-[340px] h-[340px] bg-gray-200 text-white p-8 rounded-xl flex flex-col justify-between gap-4 transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group"
+      role="article"
+      aria-label={title}
+      className="w-[340px] h-[340px] bg-gray-100 text-white p-8 rounded-xl flex flex-col justify-between gap-4 transform transition-all duration-300 ease-out motion-reduce:transition-none hover:scale-105 hover:shadow-2xl relative overflow-hidden group"
     >
-      {/* Loading skeleton */}
-      {backgroundImage && !imageLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse" />
-      )}
-
-      {/* Background image with hover effect - only render when in view */}
-      {backgroundImage && isInView && (
-        <div
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out ${
-            imageLoaded ? "opacity-100" : "opacity-0"
-          } ${isHovered ? "scale-110" : "scale-100"}`}
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, ${isHovered ? 0.5 : 0.3}), rgba(0, 0, 0, ${isHovered ? 0.5 : 0.3})), url(${backgroundImage})`,
-          }}
-        />
+      {/* Background image — Next.js Image for optimization (WebP, srcSet, lazy) */}
+      {backgroundImage && (
+        <>
+          <div className="absolute inset-0">
+            <Image
+              src={backgroundImage}
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="340px"
+              className="object-cover transition-transform duration-700 ease-in-out motion-reduce:transition-none group-hover:scale-110"
+              loading="lazy"
+            />
+          </div>
+          {/* Overlay via CSS group-hover — no JS state, no re-renders */}
+          <div aria-hidden="true" className="absolute inset-0 bg-black/55 group-hover:bg-black/65 transition-colors duration-700 motion-reduce:transition-none" />
+        </>
       )}
 
       {/* Header */}
-      <div className="relative z-10 flex justify-start items-center">
+      <div className="relative z-10 flex justify-between">
         <Image
           src={folder}
-          alt="Project folder"
+          alt=""
+          aria-hidden="true"
           width={24}
           className="drop-shadow-md"
         />
+        {/* Icon is decorative — link itself carries the accessible label */}
+        {href && (
+          <Image
+            src={linkIcon}
+            alt=""
+            aria-hidden="true"
+            className="transition-transform duration-200 motion-reduce:transition-none group-hover:scale-110"
+            width={24}
+          />
+        )}
       </div>
 
       {/* Title */}
-      <h3 className="relative z-10 text-xl font-bold drop-shadow-lg">
+      <h3 className="relative z-10 text-2xl font-bold">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="relative z-10 text-sm leading-relaxed drop-shadow-md line-clamp-3">
+      <p className="relative z-10 text-lg leading-relaxed drop-shadow-md line-clamp-3">
         {description}
       </p>
 
       {/* Tools */}
-      <div className="relative z-10 flex flex-wrap gap-3 items-center">
+      <ul
+        className="relative z-10 flex flex-wrap gap-3 items-center list-none p-0 m-0"
+        aria-label={t("projectCard.technologies")}
+      >
         {tools.map((tool) => (
-          <span
+          <li
             key={tool}
             className="p-1 rounded-md bg-white/10 backdrop-blur-sm transition-all duration-200 hover:bg-white/20"
           >
             <TechIcon name={tool} size={28} />
-          </span>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={t("projectCard.viewProject", { title })}
+        className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+      >
+        {card}
+      </Link>
+    );
+  }
+
+  return <div className="block">{card}</div>;
 };
 
 export default ProjectDesign;

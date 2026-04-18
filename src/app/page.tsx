@@ -66,12 +66,8 @@ const Home = () => {
   }, [handleScroll]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 4500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const controls = animate(count, 100, { duration: 3 });
+    const controls = animate(count, 100, { duration: 1.5 });
+    controls.then(() => setIsLoading(false));
     return () => controls.stop();
   }, [count]);
 

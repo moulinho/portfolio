@@ -47,6 +47,7 @@ const resources = {
         folderIcon: "Project folder",
         repositoryIcon: "Repository",
         externalLink: "Open project",
+        technologies: "Technologies used",
       },
       experience: {
         legafrik_lead: "Front-End Team Lead",
@@ -81,6 +82,7 @@ const resources = {
         location: "Abidjan, Côte d'Ivoire",
       },
       projects: {
+
         moide_ferme: {
           description:
             "Moide-ferme is a platform for creating and selling livestock products such as equipment, food and consumer products.",
@@ -137,6 +139,10 @@ const resources = {
         },
       },
       designProjects: {
+        transigo: {
+          description:
+            "TransiGo is a referenced transport and logistics application. Maritime, air, land, transit and import-export in your pocket.",
+        },
         moide_ferme: {
           description:
             "Moide-ferme is a platform for creating and selling livestock products such as equipment, food and consumer products.",
@@ -209,6 +215,7 @@ const resources = {
         folderIcon: "Dossier du projet",
         repositoryIcon: "Dépôt",
         externalLink: "Ouvrir le projet",
+        technologies: "Technologies utilisées",
       },
       experience: {
         legafrik_lead: "Chef d'équipe Front-End",
@@ -249,7 +256,7 @@ const resources = {
 
         mobile_biflaz: {
           description:
-            "Mobile Biflaz est une application de covoiturage pratique et abordable qui vous met en relation avec un conducteur à proximité en quelques minutes, à tout moment et en tout lieu.",
+            "Mobile Biflaz est une application de covoiturage pratique et abordable qui vous met en relation avec un conducteur à proximité en quelques minutes.",
         },
         mobile_monbarra: {
           description:
@@ -300,6 +307,10 @@ const resources = {
         },
       },
       designProjects: {
+        transigo: {
+          description:
+            "TransiGo est une application de transport et logistique référencées. Maritime, aérien, terrestre, transit et import-export dans votre poche",
+        },
         moide_ferme: {
           description:
             "Moide-ferme est une plateforme de création et de vente de produits d'élevage tels que des équipements, des aliments et des produits de consommation.",
