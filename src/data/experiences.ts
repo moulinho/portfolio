@@ -5,6 +5,8 @@ export interface ExperienceData {
   dateKey: string;
   locationKey: string;
   descriptionKey?: string;
+  descriptionIntroKey?: string;
+  descriptionKeys?: string[];
   timeline?: TimelineItemData[];
   skills: string[];
 }
@@ -23,7 +25,18 @@ export const experiencesData: ExperienceData[] = [
     company: "Freelance",
     dateKey: "experience.freelance_date",
     locationKey: "experience.freelance_location",
-    descriptionKey: "experience.freelance_desc",
+    descriptionIntroKey: "experience.freelance_desc_intro",
+    descriptionKeys: [
+      "experience.freelance_desc_1",
+      "experience.freelance_desc_2",
+      "experience.freelance_desc_3",
+      "experience.freelance_desc_4",
+      "experience.freelance_desc_5",
+      "experience.freelance_desc_6",
+      "experience.freelance_desc_7",
+      "experience.freelance_desc_8",
+      "experience.freelance_desc_9",
+    ],
     skills: [
       "JavaScript",
       "Vue.js",

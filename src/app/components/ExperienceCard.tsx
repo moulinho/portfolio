@@ -37,6 +37,8 @@ const ExperienceCard = ({
   dateKey,
   locationKey,
   descriptionKey,
+  descriptionIntroKey,
+  descriptionKeys,
   timeline,
   skills,
 }: ExperienceCardProps) => {
@@ -63,6 +65,20 @@ const ExperienceCard = ({
               <TimelineItem key={index} item={item} />
             ))}
           </ol>
+        </div>
+      );
+    }
+    if (descriptionKeys) {
+      return (
+        <div>
+          {descriptionIntroKey && (
+            <p className="text-base/7 mt-2 mb-1">{t(descriptionIntroKey)}</p>
+          )}
+          <ul className="list-disc list-inside text-base/7 space-y-1">
+            {descriptionKeys.map((key, index) => (
+              <li key={index}>{t(key)}</li>
+            ))}
+          </ul>
         </div>
       );
     }

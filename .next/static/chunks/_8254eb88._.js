@@ -65,10 +65,19 @@ const resources = {
                 jool: "Front-end Developer",
                 jool_date: "August 2021 - February 2023",
                 jool_desc: "As a Front End developer within a dynamic, hardworking and collaborative team, my daily tasks consist of creating, styling and delivering high-quality websites, design systems, web applications and digital experiences for clients such as: JOOL ID, FENOPJERCI: NATIONAL FEDERATION OF RURAL YOUTH UNIONS OF CÔTE D'IVOIRE",
-                freelance: "Full-Satck Developer",
-                freelance_date: "Juillet 2023",
-                freelance_desc: "",
-                freelance_location: '',
+                freelance: "Full-stack engineer",
+                freelance_date: "July 2023 - Present",
+                freelance_desc_intro: "As a Freelance Full Stack Engineer, I work across the entire application lifecycle, from design to production.",
+                freelance_desc_1: "Design and develop web and/or mobile applications (front-end and back-end)",
+                freelance_desc_2: "Build high-performance, responsive user interfaces",
+                freelance_desc_3: "Develop robust and secure APIs",
+                freelance_desc_4: "Ensure seamless integration between front-end and back-end services",
+                freelance_desc_5: "Optimize application performance and scalability",
+                freelance_desc_6: "Implement data and access security (authentication, JWT, OAuth)",
+                freelance_desc_7: "Write unit and functional tests",
+                freelance_desc_8: "Manage errors, logs and monitoring",
+                freelance_desc_9: "Ensure code quality and maintainability",
+                freelance_location: "Remote",
                 wefly: "Front-end Developer",
                 wefly_date: "May 2021 - August 2021",
                 wefly_desc: "I work on existing projects by implementing new mockups, making them cross-platform and making pages dynamic by adding APIs.",
@@ -203,9 +212,18 @@ const resources = {
                 jool_date: "Août 2021 - Février 2023",
                 jool_desc: "En tant que développeur Front End au sein d'une équipe dynamique, très travailleuse et collaborative, mes tâches au quotidien consistent à créer, styliser et livrer des sites Web, des systèmes de conception, des applications web et des expériences numériques de haute qualité pour des clients tels que: JOOL ID, FENOPJERCI: FEDERATION NATIONALE DES UNIONS DE LA JEUNESSE RURALE DE COTE D'IVOIRE",
                 freelance: "Ingénieur Full Stack",
-                freelance_date: "Juillet 2023",
-                freelance_desc: "",
-                freelance_location: '',
+                freelance_date: "Juillet 2023 - Présent",
+                freelance_desc_intro: "En tant qu'Ingénieur Full Stack Freelance, j'interviens sur l'ensemble du cycle de vie des applications, de la conception à la mise en production.",
+                freelance_desc_1: "Concevoir et développer des applications web et/ou mobiles (front-end et back-end)",
+                freelance_desc_2: "Mettre en place des interfaces utilisateur performantes et responsives",
+                freelance_desc_3: "Développer des API robustes et sécurisées",
+                freelance_desc_4: "Assurer l'intégration entre le front-end et les services back-end",
+                freelance_desc_5: "Optimiser les performances et la scalabilité des applications",
+                freelance_desc_6: "Assurer la sécurité des données et des accès (authentification, JWT, OAuth)",
+                freelance_desc_7: "Mettre en place des tests unitaires et fonctionnels",
+                freelance_desc_8: "Gérer les erreurs, logs et monitoring",
+                freelance_desc_9: "Garantir la qualité du code et la maintenabilité",
+                freelance_location: "Remote",
                 wefly: "Développeur front-end",
                 wefly_date: "Mai 2021 - Août 2021",
                 wefly_desc: "J'interviens sur les projets existants en implémentant de nouvelles maquettes, rendre cross-plateforme et rendre les pages dynamiques en ajoutant les API.",
@@ -497,6 +515,20 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 ;
+function CvDownload(param) {
+    let { href, children } = param;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+        href: href,
+        target: "_blank",
+        className: "bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all",
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/app/components/Section.tsx",
+        lineNumber: 17,
+        columnNumber: 5
+    }, this);
+}
+_c = CvDownload;
 const Section = (param)=>{
     let { title, children, id } = param;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -511,56 +543,53 @@ const Section = (param)=>{
                         children: title
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/Section.tsx",
-                        lineNumber: 12,
+                        lineNumber: 29,
                         columnNumber: 5
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-gray-500 text-sm",
                         children: [
-                            title.includes("propos") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            title.includes("propos") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CvDownload, {
                                 href: "https://drive.google.com/file/d/1QwfUSYlrkOiODwUz6zTdkxpAGK30GguI/view?usp=sharing",
-                                target: "_blank",
-                                className: "bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all",
                                 children: "Télécharger mon CV"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Section.tsx",
-                                lineNumber: 16,
+                                lineNumber: 33,
                                 columnNumber: 9
                             }, ("TURBOPACK compile-time value", void 0)),
-                            title.includes("About") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            title.includes("About") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CvDownload, {
                                 href: "https://docs.google.com/document/d/1zpzvsBe7vHZe8_2B3ijHoIpgt5mfH3Z1/edit?usp=sharing&ouid=117967692092447813414&rtpof=true&sd=true",
-                                target: "_blank",
-                                className: "bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all",
                                 children: "Download my CV"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Section.tsx",
-                                lineNumber: 25,
+                                lineNumber: 39,
                                 columnNumber: 9
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/Section.tsx",
-                        lineNumber: 13,
+                        lineNumber: 30,
                         columnNumber: 5
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/Section.tsx",
-                lineNumber: 11,
+                lineNumber: 28,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             children
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/Section.tsx",
-        lineNumber: 10,
+        lineNumber: 27,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 };
-_c = Section;
+_c1 = Section;
 const __TURBOPACK__default__export__ = Section;
-var _c;
-__turbopack_context__.k.register(_c, "Section");
+var _c, _c1;
+__turbopack_context__.k.register(_c, "CvDownload");
+__turbopack_context__.k.register(_c1, "Section");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -1231,7 +1260,7 @@ _s(TimelineItem, "zlIdU9EjM2llFt74AbE2KsUJXyM=", false, function() {
 });
 _c = TimelineItem;
 const ExperienceCard = (param)=>{
-    let { roleKey, company, companyLink, dateKey, locationKey, descriptionKey, timeline, skills } = param;
+    let { roleKey, company, companyLink, dateKey, locationKey, descriptionKey, descriptionIntroKey, descriptionKeys, timeline, skills } = param;
     _s1();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
     const renderCompany = ()=>{
@@ -1243,7 +1272,7 @@ const ExperienceCard = (param)=>{
                 children: company
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                lineNumber: 49,
+                lineNumber: 51,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0));
         }
@@ -1252,7 +1281,7 @@ const ExperienceCard = (param)=>{
             children: company
         }, void 0, false, {
             fileName: "[project]/src/app/components/ExperienceCard.tsx",
-            lineNumber: 54,
+            lineNumber: 56,
             columnNumber: 12
         }, ("TURBOPACK compile-time value", void 0));
     };
@@ -1266,17 +1295,49 @@ const ExperienceCard = (param)=>{
                             item: item
                         }, index, false, {
                             fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                            lineNumber: 63,
+                            lineNumber: 65,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                    lineNumber: 61,
+                    lineNumber: 63,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                lineNumber: 60,
+                lineNumber: 62,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0));
+        }
+        if (descriptionKeys) {
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: [
+                    descriptionIntroKey && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-base/7 mt-2 mb-1",
+                        children: t(descriptionIntroKey)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/ExperienceCard.tsx",
+                        lineNumber: 75,
+                        columnNumber: 13
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "list-disc list-inside text-base/7 space-y-1",
+                        children: descriptionKeys.map((key, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: t(key)
+                            }, index, false, {
+                                fileName: "[project]/src/app/components/ExperienceCard.tsx",
+                                lineNumber: 79,
+                                columnNumber: 15
+                            }, ("TURBOPACK compile-time value", void 0)))
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/ExperienceCard.tsx",
+                        lineNumber: 77,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/components/ExperienceCard.tsx",
+                lineNumber: 73,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0));
         }
@@ -1286,7 +1347,7 @@ const ExperienceCard = (param)=>{
                 children: t(descriptionKey)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                lineNumber: 70,
+                lineNumber: 86,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0));
         }
@@ -1303,7 +1364,7 @@ const ExperienceCard = (param)=>{
                         children: t(roleKey)
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                        lineNumber: 78,
+                        lineNumber: 94,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1311,13 +1372,13 @@ const ExperienceCard = (param)=>{
                         children: renderCompany()
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                        lineNumber: 79,
+                        lineNumber: 95,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                lineNumber: 77,
+                lineNumber: 93,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             (dateKey || locationKey) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1329,7 +1390,7 @@ const ExperienceCard = (param)=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                lineNumber: 82,
+                lineNumber: 98,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1337,7 +1398,7 @@ const ExperienceCard = (param)=>{
                 children: renderDescription()
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                lineNumber: 88,
+                lineNumber: 104,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1347,18 +1408,18 @@ const ExperienceCard = (param)=>{
                         children: skill
                     }, index, false, {
                         fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                        lineNumber: 91,
+                        lineNumber: 107,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ExperienceCard.tsx",
-                lineNumber: 89,
+                lineNumber: 105,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/ExperienceCard.tsx",
-        lineNumber: 76,
+        lineNumber: 92,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -2388,7 +2449,18 @@ const experiencesData = [
         company: "Freelance",
         dateKey: "experience.freelance_date",
         locationKey: "experience.freelance_location",
-        descriptionKey: "experience.freelance_desc",
+        descriptionIntroKey: "experience.freelance_desc_intro",
+        descriptionKeys: [
+            "experience.freelance_desc_1",
+            "experience.freelance_desc_2",
+            "experience.freelance_desc_3",
+            "experience.freelance_desc_4",
+            "experience.freelance_desc_5",
+            "experience.freelance_desc_6",
+            "experience.freelance_desc_7",
+            "experience.freelance_desc_8",
+            "experience.freelance_desc_9"
+        ],
         skills: [
             "JavaScript",
             "Vue.js",
