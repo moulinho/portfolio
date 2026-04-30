@@ -516,17 +516,29 @@ const Section = (param)=>{
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-gray-500 text-sm",
-                        children: title.includes("propos") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            href: "https://drive.google.com/file/d/1QwfUSYlrkOiODwUz6zTdkxpAGK30GguI/view?usp=sharing",
-                            target: "_blank",
-                            className: "bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all",
-                            children: "Télécharger mon CV"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/components/Section.tsx",
-                            lineNumber: 16,
-                            columnNumber: 9
-                        }, ("TURBOPACK compile-time value", void 0))
-                    }, void 0, false, {
+                        children: [
+                            title.includes("propos") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "https://drive.google.com/file/d/1QwfUSYlrkOiODwUz6zTdkxpAGK30GguI/view?usp=sharing",
+                                target: "_blank",
+                                className: "bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all",
+                                children: "Télécharger mon CV"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Section.tsx",
+                                lineNumber: 16,
+                                columnNumber: 9
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            title.includes("About") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "https://docs.google.com/document/d/1zpzvsBe7vHZe8_2B3ijHoIpgt5mfH3Z1/edit?usp=sharing&ouid=117967692092447813414&rtpof=true&sd=true",
+                                target: "_blank",
+                                className: "bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all",
+                                children: "Download my CV"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Section.tsx",
+                                lineNumber: 25,
+                                columnNumber: 9
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/components/Section.tsx",
                         lineNumber: 13,
                         columnNumber: 5

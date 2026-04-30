@@ -21,7 +21,17 @@ const Section = ({ title, children, id }: SectionProps) => (
           Télécharger mon CV
         </Link>
       )}
-    </span></div>
+      {title.includes("About") && (
+        <Link
+          href="https://docs.google.com/document/d/1zpzvsBe7vHZe8_2B3ijHoIpgt5mfH3Z1/edit?usp=sharing&ouid=117967692092447813414&rtpof=true&sd=true"
+          target="_blank"
+          className="bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all"
+        >
+          Download my CV
+        </Link>
+      )}
+    </span>
+    </div>
     {children}
   </section>
 );
