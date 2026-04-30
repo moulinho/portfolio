@@ -70,7 +70,7 @@ const Stacks = () => {
     <div className=" ">
       {/* Design Stacks */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+        <h3 className="text-xl font-semibold text-gray-700 mb-4 p-3 rounded-md  bg-white">
           Design
         </h3>
         <div className="flex flex-wrap gap-6">
@@ -96,7 +96,7 @@ const Stacks = () => {
 
       {/* Mobile Stacks */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+        <h3 className="text-xl font-semibold text-gray-700 mb-4 p-3 rounded-md  bg-white">
           Mobile
         </h3>
         <div className="flex flex-wrap gap-6">
@@ -120,7 +120,7 @@ const Stacks = () => {
 
       {/* Front-end Stacks */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+        <h3 className="text-xl font-semibold text-gray-700 mb-4 p-3 rounded-md  bg-white">
           Front-end
         </h3>
         <div className="flex flex-wrap  gap-6">
@@ -144,7 +144,7 @@ const Stacks = () => {
 
       {/* Back-end Stacks */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4 px-2 rounded-md  bg-white">
+        <h3 className="text-xl font-semibold text-gray-700 mb-4 p-3 rounded-md  bg-white">
           Back-end
         </h3>
         <div className="flex flex-wrap gap-6">

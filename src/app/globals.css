@@ -16,12 +16,25 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  /* Use the Next.js-loaded Geist font; fall back to system sans-serif */
   font-family: var(--font-geist-sans), system-ui, sans-serif;
-  /* WCAG 1.4.12 Text Spacing — minimum line-height 1.5× */
-  line-height: 1.5;
-  /* WCAG 1.4.12 — minimum letter-spacing */
+  font-size: 1rem;
+  line-height: 1.6;
   letter-spacing: 0.012em;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+  max-width: 70ch;
 }
 
 code,

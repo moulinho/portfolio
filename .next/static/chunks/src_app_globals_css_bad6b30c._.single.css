@@ -636,12 +636,12 @@ img, video {
   list-style-position: inside;
 }
 
-.list-none {
-  list-style-type: none;
-}
-
 .list-disc {
   list-style-type: disc;
+}
+
+.list-none {
+  list-style-type: none;
 }
 
 .grid-cols-1 {
@@ -1079,7 +1079,23 @@ body {
   background: var(--background);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   letter-spacing: .012em;
-  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -.02em;
+  text-wrap: balance;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  text-wrap: pretty;
+  max-width: 70ch;
 }
 
 code, pre, kbd, samp {
