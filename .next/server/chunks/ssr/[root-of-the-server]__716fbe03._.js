@@ -2563,6 +2563,18 @@ const designProjectsData = [
         href: "https://transi-go-web.vercel.app/"
     },
     {
+        title: "Biflaz",
+        descriptionKey: "projects.mobile_biflaz.description",
+        backgroundImage: "/biflaz1.png",
+        tools: [
+            "figma",
+            "vue",
+            "quasar",
+            "capacitor"
+        ],
+        href: "https://drive.google.com/file/d/1PKzbesofEgT2gf0WiyUNk_TwYvdgVJi_/view?usp=sharing"
+    },
+    {
         title: "Moide Ferme",
         descriptionKey: "designProjects.moide_ferme.description",
         backgroundImage: "/Moide.png",
