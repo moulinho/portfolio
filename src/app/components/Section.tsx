@@ -30,13 +30,13 @@ const Section = ({ title, children, id }: SectionProps) => (
     <span className="text-gray-500 text-sm">
       
       {title.includes("propos") && (
-        <CvDownload href="https://drive.google.com/file/d/1QwfUSYlrkOiODwUz6zTdkxpAGK30GguI/view?usp=sharing">
+        <CvDownload href="https://drive.google.com/file/d/1Tm2OZYHw3pJUoceCaGDrUzNl0alwkyTQ/view?usp=sharing">
           Télécharger mon CV
         </CvDownload>
       )}
        
       {title.includes("About") && (
-        <CvDownload href="https://docs.google.com/document/d/1zpzvsBe7vHZe8_2B3ijHoIpgt5mfH3Z1/edit?usp=sharing&ouid=117967692092447813414&rtpof=true&sd=true">
+        <CvDownload href="https://drive.google.com/file/d/17st9co3roVkKtgI62fdV0sDr6TTAFNFf/view?usp=sharing">
           Download my CV
         </CvDownload>
       )}
