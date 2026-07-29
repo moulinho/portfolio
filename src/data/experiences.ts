@@ -20,6 +20,7 @@ export interface TimelineItemData {
 }
 
 export const experiencesData: ExperienceData[] = [
+ 
   {
     roleKey: "experience.freelance",
     company: "Freelance",
@@ -53,6 +54,39 @@ export const experiencesData: ExperienceData[] = [
       "Quasar Framework",
       "Figma",
       "Adobe XD",
+    ],
+  }, {
+    roleKey: "experience.simdri",
+    company: "SIMDRI & SERVICHAIN",
+    dateKey: "experience.simdri_date",
+    locationKey: "experience.simdri_location",
+    descriptionKeys: [
+      "experience.simdri_desc_1",
+      "experience.simdri_desc_2",
+      "experience.simdri_desc_3",
+      "experience.simdri_desc_4",
+      "experience.simdri_desc_5",
+      "experience.simdri_desc_6",
+      "experience.simdri_desc_7",
+      "experience.simdri_desc_8",
+      "experience.simdri_desc_9",
+      "experience.simdri_desc_10",
+      "experience.simdri_desc_11",
+      "experience.simdri_desc_12",
+    ],
+    skills: [
+      "React",
+      "React Native",
+      "Node.js",
+      "NestJS",
+      "Angular",
+      "TypeScript",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "Git",
+      "Blockchain",
+      "Web3",
     ],
   },
   {

@@ -80,6 +80,28 @@ const resources = {
         freelance_desc_9: "Ensure code quality and maintainability",
         freelance_location: "Remote",
         
+        simdri: "Web and Mobile Developer",
+        simdri_date: "Sept. 2025 - July 2026",
+        simdri_location: "Abidjan, Côte d'Ivoire (Remote)",
+        simdri_desc_1:
+          "Development of cross-platform mobile applications with React Native.",
+        simdri_desc_2:
+          "Publication and maintenance of applications on Google Play Store and Apple App Store.",
+        simdri_desc_3: "Development and maintenance of secure REST APIs.",
+        simdri_desc_4:
+          "Integration of third-party services such as payments, geolocation and push notifications.",
+        simdri_desc_5:
+          "API documentation according to OpenAPI / Swagger standards.",
+        simdri_desc_6:
+          "Optimization of relational and non-relational databases.",
+        simdri_desc_7:
+          "Implementation of application security best practices (GDPR, OWASP, authentication, encryption).",
+        simdri_desc_8: "Unit, integration and end-to-end testing.",
+        simdri_desc_9: "CI/CD processes and deployments.",
+        simdri_desc_10:
+          "Incident management, corrective maintenance and evolutive maintenance.",
+        simdri_desc_11: "Production of technical documentation and reporting.",
+        simdri_desc_12: "Projects: Cauris Wallet and GIM-Connect.",
         wefly: "Front-end Developer",
         wefly_date: "May 2021 - August 2021",
         wefly_desc:
@@ -256,6 +278,28 @@ const resources = {
         freelance_desc_9: "Garantir la qualité du code et la maintenabilité",
         freelance_location: "Remote",
 
+        simdri: "Développeur Web et Mobile",
+        simdri_date: "Sept. 2025 - Juil. 2026",
+        simdri_location: "Abidjan, Côte d'Ivoire (à distance)",
+        simdri_desc_1:
+          "Développement d'applications mobiles cross-platform avec React Native.",
+        simdri_desc_2:
+          "Publication et maintenance d'applications sur Google Play Store et Apple App Store.",
+        simdri_desc_3: "Développement et maintenance d'API REST sécurisées.",
+        simdri_desc_4:
+          "Intégration de services tiers tels que le paiement, la géolocalisation et les notifications push.",
+        simdri_desc_5:
+          "Documentation des API selon les standards OpenAPI / Swagger.",
+        simdri_desc_6:
+          "Optimisation de bases de données relationnelles et non relationnelles.",
+        simdri_desc_7:
+          "Mise en œuvre des bonnes pratiques de sécurité applicative (RGPD, OWASP, authentification, chiffrement).",
+        simdri_desc_8: "Réalisation de tests unitaires, d'intégration et end-to-end.",
+        simdri_desc_9: "Processus CI/CD et déploiements.",
+        simdri_desc_10:
+          "Gestion des incidents, maintenance corrective et maintenance évolutive.",
+        simdri_desc_11: "Production de documentation technique et reporting.",
+        simdri_desc_12: "Projets : Cauris Wallet et GIM-Connect.",
         wefly: "Développeur front-end",
         wefly_date: "Mai 2021 - Août 2021",
         wefly_desc:
