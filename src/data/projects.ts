@@ -23,7 +23,7 @@ export const projectsData: ProjectData[] = [
     descriptionKey: "projects.mobile_biflaz.description",
     tools: ["vue", "quasar", "pinia", "capacitor"],
     icon: "folder",
-    href: "https://drive.google.com/file/d/1VMbvcfT99k77-ouXhq7-cvQuPW8P9PiB/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1PKzbesofEgT2gf0WiyUNk_TwYvdgVJi_/view?usp=sharing",
   },
   {
     title: "Mobile monbarra",
